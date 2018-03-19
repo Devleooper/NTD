@@ -23,22 +23,26 @@ import javax.persistence.ManyToOne;
 public class CiudadEntity implements Serializable{
     
     private final static long serialVersionUID = 1L;
-    
+    /**
+     * Codigo de la ciudad  - llave primaria
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id_ciudad" , nullable = false , unique = true)
-    private Long idCiudad;
+    @Column(name="cod_ciudad" , nullable = false , unique = true)
+    private Long codCiudad;
     
-    
+    /**
+     * Nombre de la ciudad
+     */
     @Column(name = "nom_ciudad" , nullable = false)
     private String nomCiudad;
     /**
      * Relacion muchos a uno con la tabla pais
      */
     @ManyToOne
-    @JoinColumn(name = "id_pais")
+    @JoinColumn(name = "cod_pais")
     private PaisEntity pais;
-
+//Getters y Setters de la tabla Ciudad
     public PaisEntity getPais() {
         return pais;
     }
@@ -47,13 +51,15 @@ public class CiudadEntity implements Serializable{
         this.pais = pais;
     }
 
-    public Long getIdCiudad() {
-        return idCiudad;
+    public Long getCodCiudad() {
+        return codCiudad;
     }
 
-    public void setIdCiudad(Long idCiudad) {
-        this.idCiudad = idCiudad;
+    public void setCodCiudad(Long codCiudad) {
+        this.codCiudad = codCiudad;
     }
+
+   
 
     public String getNomCiudad() {
         return nomCiudad;

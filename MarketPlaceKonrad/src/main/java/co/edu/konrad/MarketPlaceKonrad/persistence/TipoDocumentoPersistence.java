@@ -5,7 +5,7 @@
  */
 package co.edu.konrad.MarketPlaceKonrad.persistence;
 
-import co.edu.konrad.MarketPlaceKonrad.entities.TipoIdEntity;
+import co.edu.konrad.MarketPlaceKonrad.entities.TipoDocumentoEntity;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,7 +18,7 @@ import javax.persistence.Query;
  * Manejador de la tabla TipoId
  */
 @Stateless
-public class TipoIdPersistence {
+public class TipoDocumentoPersistence {
     
     @PersistenceContext(unitName = "MarketPlacePU")
     protected EntityManager em;
@@ -29,8 +29,8 @@ public class TipoIdPersistence {
      *  
      * 
      */
-     public List <TipoIdEntity> findAll(){
-        Query todos = em.createQuery("select ec from TipoIdEntity ec");
+     public List <TipoDocumentoEntity> findAll(){
+        Query todos = em.createQuery("select ec from TipoDocumentoEntity ec");
         return todos.getResultList();
     }
      
@@ -40,8 +40,8 @@ public class TipoIdPersistence {
      * @param id
      * @return elemento encontrado
      */
-    public TipoIdEntity find(Long id){
-        TipoIdEntity tipoid = em.find(TipoIdEntity.class, id);
+    public TipoDocumentoEntity find(Long id){
+        TipoDocumentoEntity tipoid = em.find(TipoDocumentoEntity.class, id);
         return tipoid;
     }
     
@@ -50,7 +50,7 @@ public class TipoIdPersistence {
      * @param TipoIdNuevo  
      * @return Objeto creado
      */
-    public TipoIdEntity create(TipoIdEntity TipoIdNuevo){
+    public TipoDocumentoEntity create(TipoDocumentoEntity TipoIdNuevo){
         em.persist(TipoIdNuevo);
         return TipoIdNuevo;
     }
@@ -60,7 +60,7 @@ public class TipoIdPersistence {
      * @param TipoUpdate  
      * @return objeto actualizado
      */
-    public TipoIdEntity update(TipoIdEntity TipoUpdate){
+    public TipoDocumentoEntity update(TipoDocumentoEntity TipoUpdate){
         return em.merge(TipoUpdate);
     }
     
@@ -69,7 +69,7 @@ public class TipoIdPersistence {
      * @param id 
      */
     public void delete(Long id){
-        TipoIdEntity TipoidBorrar = em.find(TipoIdEntity.class, id);
+        TipoDocumentoEntity TipoidBorrar = em.find(TipoDocumentoEntity.class, id);
         em.remove(TipoidBorrar);
     }
 }

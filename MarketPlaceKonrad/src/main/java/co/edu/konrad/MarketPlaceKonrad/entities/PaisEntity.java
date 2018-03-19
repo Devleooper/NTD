@@ -21,23 +21,29 @@ import javax.persistence.Id;
 public class PaisEntity implements Serializable{
     
     private final static long serialVersionUID = 1L;
-
+    /**
+     * Codigo del pais - llave primaria
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_pais", unique = true, nullable = false)
-    private Long idPais;
-    
+    @Column(name = "cod_pais", unique = true, nullable = false)
+    private Long codPais;
+    /**
+     * Nombre del pais
+     */
     
     @Column(name="nom_pais" , nullable = false)
     private String nombrePais;
-
-    public Long getIdPais() {
-        return idPais;
+ //Getters y Setters de la tabla pais
+    public Long getCodPais() {
+        return codPais;
     }
 
-    public void setIdPais(Long idPais) {
-        this.idPais = idPais;
+    public void setCodPais(Long codPais) {
+        this.codPais = codPais;
     }
+
+ 
 
     public String getNombrePais() {
         return nombrePais;

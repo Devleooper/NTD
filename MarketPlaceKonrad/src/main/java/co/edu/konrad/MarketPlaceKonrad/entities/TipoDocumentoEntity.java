@@ -17,27 +17,33 @@ import javax.persistence.Id;
  * @author Leonardo Ruiz
  * tabla tipo_id
  */
-@Entity(name = "tipo_id")
-public class TipoIdEntity implements Serializable{
+@Entity(name = "tipo_documento")
+public class TipoDocumentoEntity implements Serializable{
     
     private final static long serialVersionUID = 1L;
-
+    /**
+     * Codigo del tipo de documento - llave primaria
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_tipo_id", unique = true, nullable = false)
-    private Long idtipoID;
-    
-    @Column(name ="nom_tipo" ,nullable = false , unique= true)
+    @Column(name = "cod_tipo_documento", unique = true, nullable = false)
+    private Long idtipo;
+    /**
+     * Nombre del tipo de documento
+     */
+    @Column(name ="nom_documento" ,nullable = false , unique= true)
     private String nomTipoId;
-
-    public Long getIdtipoID() {
-        return idtipoID;
+   //Getters y Setters de la tabla Tipo_documento
+    public Long getIdtipo() {
+        return idtipo;
     }
 
-    public void setIdtipoID(Long idtipoID) {
-        this.idtipoID = idtipoID;
+    public void setIdtipo(Long idtipo) {
+        this.idtipo = idtipo;
     }
 
+    
+  
     public String getNomTipoId() {
         return nomTipoId;
     }
