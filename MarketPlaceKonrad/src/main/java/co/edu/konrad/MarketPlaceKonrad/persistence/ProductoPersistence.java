@@ -6,7 +6,6 @@
 package co.edu.konrad.MarketPlaceKonrad.persistence;
 
 import co.edu.konrad.MarketPlaceKonrad.entities.ProductoEntity;
-import co.edu.konrad.MarketPlaceKonrad.entities.UsuarioEntity;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -15,8 +14,8 @@ import javax.persistence.Query;
 
 /**
  *
- * @author Leonardo Ruiz
- * Manejador de la tabla usuario
+ * @author Manuel S. Nino
+ * Manejador de la tabla Producto
  */
 @Stateless
 public class ProductoPersistence {

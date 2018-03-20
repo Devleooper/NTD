@@ -15,7 +15,7 @@ import javax.persistence.Column;
  * @author Manuel S. Nino
  */
 @Entity (name = "Categoria")
-class CategoriaEntity implements Serializable{
+public class CategoriaEntity implements Serializable{
 
      /**
      * Controlador de versiones

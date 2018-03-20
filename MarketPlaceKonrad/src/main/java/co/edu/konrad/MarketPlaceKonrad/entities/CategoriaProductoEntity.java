@@ -17,7 +17,7 @@ import javax.persistence.JoinColumn;
  * @author Manuel S. Nino
  */
 @Entity (name = "Categoria_producto")
-class CategoriaProductoEntity implements Serializable{
+public class CategoriaProductoEntity implements Serializable{
     /**
      * Controlador de versiones
      * 

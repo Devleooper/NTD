@@ -16,7 +16,7 @@ import javax.persistence.ManyToOne;
  * @author Manuel S. Nino
  */
 @Entity
-class MarcaEntity implements Serializable {
+public class MarcaEntity implements Serializable {
     /**
      * Controlador de versiones
      * 
