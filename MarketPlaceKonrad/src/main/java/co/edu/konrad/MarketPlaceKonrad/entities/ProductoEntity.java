@@ -12,12 +12,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 /**
  *
  * @author Manuel S. Nino
  */
 @Entity (name = "Producto")
 public class ProductoEntity implements Serializable {
+     /**
+     * Controlador de versiones
+     * 
+     */
     private final static long serialVersionUID = 1L;
     
      /**
@@ -65,4 +70,64 @@ public class ProductoEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "cod_marca")
     private MarcaEntity marca;    
+    
+//    @OneToMany
+//    @JoinColumn(name = "cod_producto")
+//    private CategoriaProductoEntity categoria;
+    
+    public Long getCodProducto() {
+        return codProducto;
+    }
+
+    public void setCodProducto(Long codProducto) {
+        this.codProducto = codProducto;
+    }
+
+    public String getNomProducto() {
+        return nomProducto;
+    }
+
+    public void setNomProducto(String nomProducto) {
+        this.nomProducto = nomProducto;
+    }
+
+    public double getValorUnitario() {
+        return valorUnitario;
+    }
+
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
+
+    public int getGarantia() {
+        return garantia;
+    }
+
+    public void setGarantia(int garantia) {
+        this.garantia = garantia;
+    }
+
+    public int getStockDisponible() {
+        return stockDisponible;
+    }
+
+    public void setStockDisponible(int stockDisponible) {
+        this.stockDisponible = stockDisponible;
+    }
+
+    public TipoProductoEntity getTipoProducto() {
+        return tipoProducto;
+    }
+
+    public void setTipoProducto(TipoProductoEntity tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
+
+    public MarcaEntity getMarca() {
+        return marca;
+    }
+
+    public void setMarca(MarcaEntity marca) {
+        this.marca = marca;
+    }
 }

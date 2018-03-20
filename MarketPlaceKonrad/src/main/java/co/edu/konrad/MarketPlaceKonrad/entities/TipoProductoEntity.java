@@ -17,7 +17,10 @@ import javax.persistence.ManyToOne;
  */
 @Entity(name = "Tipo_producto")
 class TipoProductoEntity implements Serializable{
-
+    /**
+     * Controlador de versiones
+     * 
+     */
     private final static long serialVersionUID = 1L;
     
      /**
