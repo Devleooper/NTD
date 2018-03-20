@@ -11,44 +11,44 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-/**
+**
  *
- * @author Leonardo Ruiz
- * Tabla tipo_tarjeta
+ * @author Juan Diego Bernal
  */
-@Entity(name = "tipo_tarjeta")
+@Entity(name = "Tipo_tarjeta")
 public class TipoTarjetaEntity implements Serializable {
+
+    private final static long serialVersionUID = 1L;
+    
     /**
-     * Id de la tarjeta
+     * Codigo del tipo de tarjeta
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column (name = "cod_tipo_tarjeta" , nullable = false , unique  = true)
-    private Long codTipotarjeta;
-    /*
-    Nombre de el tipo de tarjeta (debito o credito)
-    */
-    @Column(name = "nom_tipo_tarjeta" , nullable = false , unique = true)
-    private String nombreTipoTarjeta;
-    
-    
-    // Getters y Setters de la tabla tipo_tarjeta
+    @Column(name = "cod_tipo_tarjeta", unique = true, nullable = false)
+    private Long codTipoTarjeta;
 
-    public Long getCodTipotarjeta() {
-        return codTipotarjeta;
+    /**
+     * nombre del tipo de tarjeta
+     */
+    @Column(name = "nom_tipo_tarjeta")
+    private String nomTipoTarjeta;
+
+    //Getters y Setters de la tabla Tipo Tarjeta
+
+    public Long getCodTipoTarjeta() {
+        return codTipoTarjeta;
     }
 
-    public void setCodTipotarjeta(Long codTipotarjeta) {
-        this.codTipotarjeta = codTipotarjeta;
+    public void setCodTipoTarjeta(Long codTipoTarjeta) {
+        this.codTipoTarjeta = codTipoTarjeta;
     }
 
-    public String getNombreTipoTarjeta() {
-        return nombreTipoTarjeta;
+    public String getNomTipoTarjeta() {
+        return nomTipoTarjeta;
     }
 
-    public void setNombreTipoTarjeta(String nombreTipoTarjeta) {
-        this.nombreTipoTarjeta = nombreTipoTarjeta;
+    public void setNomTipoTarjeta(String nomTipoTarjeta) {
+        this.nomTipoTarjeta = nomTipoTarjeta;
     }
-    
 }
