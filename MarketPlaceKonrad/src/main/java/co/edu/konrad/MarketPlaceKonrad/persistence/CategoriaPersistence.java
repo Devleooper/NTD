@@ -56,7 +56,7 @@ public class CategoriaPersistence {
      */
     
     public CategoriaEntity update(CategoriaEntity categoriaActualizada){
-    return em.marge(categoriaActualizada);
+    return em.merge(categoriaActualizada);
      }
     
     /**

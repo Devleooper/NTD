@@ -14,10 +14,10 @@ import co.edu.konrad.MarketPlaceKonrad.entities.TipoTarjetaEntity;
 
 /**
  * Manejador de la entidad Tipo Tarjeta
- * @author Cindy H.
+ * @author Leonardo Ruiz
  */
 @Stateless
-public class TipoTajetaPersistence {
+public class TipoTarjetaPersistence {
     
     @PersistenceContext(unitName = "MarketPlacePU")
     protected EntityManager em;
@@ -43,7 +43,7 @@ public class TipoTajetaPersistence {
     
     /**
      * Creacion de un nuevo Tipo Tarjeta
-     * @param Tipo Tarjeta
+     * @param tipoTarjeta
      * @return nuevo Tipo Tarjeta creado
      */
     public TipoTarjetaEntity create(TipoTarjetaEntity tipoTarjeta){
@@ -53,7 +53,7 @@ public class TipoTajetaPersistence {
     
     /**
      * Actualizacion de una tupla de la tabla Tipo Tarjeta
-     * @param Tipo TarjetaActualizar
+     * @param tipoTarjeta
      * @return Tipo Tarjeta actualizado
      */
     public TipoTarjetaEntity update (TipoTarjetaEntity tipoTarjeta){

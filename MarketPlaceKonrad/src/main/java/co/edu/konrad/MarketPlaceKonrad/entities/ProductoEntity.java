@@ -10,9 +10,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
+import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+
 /**
  *
  * @author Manuel S. Nino
@@ -74,6 +75,9 @@ public class ProductoEntity implements Serializable {
 //    @OneToMany
 //    @JoinColumn(name = "cod_producto")
 //    private CategoriaProductoEntity categoria;
+    @ManyToOne
+    @JoinColumn(name ="nit_proovedor")
+    private ProovedorEntity proovedor;
     
     public Long getCodProducto() {
         return codProducto;

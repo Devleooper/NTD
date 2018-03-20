@@ -24,7 +24,7 @@ public class CategoriaProductoPersistece {
      */
         public List <CategoriaProductoEntity> finAll (){
         Query todos = em.createQuery("select cpe CategoriaProductoEntity cpe");
-        return todos.getResultList();;    
+        return todos.getResultList();    
     }
     /**
      * Obtener un elemento por su id

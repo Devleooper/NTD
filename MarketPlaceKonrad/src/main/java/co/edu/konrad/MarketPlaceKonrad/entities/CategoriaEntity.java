@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
+import javax.persistence.GenerationType;
 /**
  *
  * @author Manuel S. Nino
@@ -26,7 +27,7 @@ public class CategoriaEntity implements Serializable{
      * Codigo categoria
      */
     @Id
-    @GeneratedValue(strategy = GeneratioType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "cod_categoria")
     private Long codCategoria;
     
