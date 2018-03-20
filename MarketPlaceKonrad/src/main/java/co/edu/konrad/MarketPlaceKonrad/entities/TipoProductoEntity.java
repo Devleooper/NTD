@@ -16,7 +16,7 @@ import javax.persistence.ManyToOne;
  * @author Manuel S. Nino
  */
 @Entity(name = "Tipo_producto")
-class TipoProductoEntity implements Serializable{
+public class TipoProductoEntity implements Serializable{
     /**
      * Controlador de versiones
      * 

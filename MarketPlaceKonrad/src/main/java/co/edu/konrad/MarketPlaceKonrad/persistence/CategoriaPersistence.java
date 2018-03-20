@@ -26,7 +26,7 @@ public class CategoriaPersistence {
    
    public List <CategoriaEntity> findAll (){
    Query todos = em.createQuery("select ce CategoriaEntity ce");
-   return todos;
+   return todos.getResultList();
    }
    
    /**

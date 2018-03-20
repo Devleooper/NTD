@@ -24,6 +24,9 @@ public class CategoriaProductoEntity implements Serializable{
      */
     private final static long serialVersionUID = 1L;
     
+    @Id
+    @Column (name = "cod_categoriaProducto")
+    private Long codCategoriaProducto;
     /**
      * 
      * Relacion con categoria

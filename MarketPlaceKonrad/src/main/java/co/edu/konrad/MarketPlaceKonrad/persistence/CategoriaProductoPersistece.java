@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package co.edu.konrad.MarketPlaceKonrad.persistence;
+import co.edu.konrad.MarketPlaceKonrad.entities.CategoriaEntity;
 import co.edu.konrad.MarketPlaceKonrad.entities.CategoriaProductoEntity;
     import java.util.List;
     import javax.ejb.Stateless;
@@ -23,7 +24,7 @@ public class CategoriaProductoPersistece {
      */
         public List <CategoriaProductoEntity> finAll (){
         Query todos = em.createQuery("select cpe CategoriaProductoEntity cpe");
-        return todos;    
+        return todos.getResultList();;    
     }
     /**
      * Obtener un elemento por su id
@@ -31,5 +32,38 @@ public class CategoriaProductoPersistece {
      * @return Elemento correspondiente al id
      */
 
+    public CategoriaProductoEntity find (Long id){
+        CategoriaProductoEntity encontrado = em.find(CategoriaProductoEntity.class, id);
+        return encontrado;
+    }
     
+    /**
+     * Crear nueva CategoriaProducto
+     * @param Objeto de tipo CategoriaProductoEntity
+     * @return objeto creado
+     */
+    
+    public CategoriaProductoEntity create (CategoriaProductoEntity categoriaProductoNuevo){
+    em.persist(categoriaProductoNuevo);
+    return categoriaProductoNuevo;
+    }
+    
+    /**
+     * Eliminar un objeto de tipo categoriaProductoEntity
+     * @param id del objeto
+     */
+    public void delete (Long id){
+    CategoriaProductoEntity categoriaProductoEntityEliminada = em.find(CategoriaProductoEntity.class, id);
+    em.remove(categoriaProductoEntityEliminada);
+    }
+    
+    /**
+     * Actualizar un objeto
+     * @param Objeto actualizado
+     * @return Objeto actualizado
+     */
+    
+    public CategoriaProductoEntity update(CategoriaProductoEntity categoriaProductoEntityActualizada){
+    return em.merge(categoriaProductoEntityActualizada);
+    }
 }
