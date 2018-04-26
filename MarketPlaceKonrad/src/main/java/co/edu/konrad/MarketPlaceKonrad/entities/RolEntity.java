@@ -14,7 +14,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author Asus-Pc
+ * @author Leonardo Ruiz
  */
 @Entity(name ="rol")
 public class RolEntity implements Serializable{
