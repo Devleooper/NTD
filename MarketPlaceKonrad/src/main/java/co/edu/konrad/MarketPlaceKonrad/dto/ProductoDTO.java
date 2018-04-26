@@ -7,16 +7,20 @@ package co.edu.konrad.MarketPlaceKonrad.dto;
 
 import co.edu.konrad.MarketPlaceKonrad.entities.MarcaEntity;
 import co.edu.konrad.MarketPlaceKonrad.entities.ProductoEntity;
+import co.edu.konrad.MarketPlaceKonrad.entities.ProovedorEntity;
 import co.edu.konrad.MarketPlaceKonrad.entities.TipoProductoEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
+ * Mapeo Entidades a DTO'S y DTO'S a entidades para Producto
  *
- * @author Juan
+ * @author Manuel S. Nino
  */
 public class ProductoDTO {
 
     /**
-     * Variables tipo DTO
+     * Variables tipo DTO del Producto
      *
      */
     private Long codProducto;
@@ -27,6 +31,11 @@ public class ProductoDTO {
     private MarcaDTO marca;
     private ProovedorDTO proveedor;
 
+    /**
+     * Mapeo ProductoEntity a ProductoDTO
+     *
+     * @param producto
+     */
     public ProductoDTO(ProductoEntity producto) {
         this.codProducto = producto.getCodProducto();
         this.valorUnitario = producto.getValorUnitario();
@@ -43,4 +52,109 @@ public class ProductoDTO {
         }
     }
 
+    /**
+     * Mapeo ProductoDTO a ProductoEntity
+     *
+     * @return ProductoEntity
+     */
+    public ProductoEntity toEntity() {
+        ProductoEntity producto = new ProductoEntity();
+        producto.setCodProducto(this.codProducto);
+        producto.setValorUnitario(this.valorUnitario);
+        producto.setGarantia(this.garantia);
+        producto.setStockDisponible(this.stockDisponible);
+        if (this.tipoProducto != null) {
+            TipoProductoEntity tipoProducto = new TipoProductoEntity();
+            tipoProducto.setCodTipoProducto(this.tipoProducto.getCodTipoProducto());
+            tipoProducto.setNomTipoProducto(this.tipoProducto.getNomTipoProducto());
+            tipoProducto.setDescripcion(this.tipoProducto.getDescripcion());
+            producto.setTipoProducto(tipoProducto);
+        }
+        if (this.marca != null) {
+            MarcaEntity marca = new MarcaEntity();
+            marca.setCodMarca(this.marca.getCodMarca());
+            marca.setNomMarca(this.marca.getNomMarca());
+        }
+        if (this.proveedor != null) {
+            ProovedorEntity proveedor = new ProovedorEntity();
+            proveedor.setNitProovedor(this.proveedor.getNitProovedor());
+            proveedor.setUsuario(this.proveedor.getUsuario());
+            proveedor.setContraseña(this.proveedor.getContraseña());
+            proveedor.setAvatar(this.proveedor.getAvatar());
+            proveedor.setMailProovedor(this.proveedor.getMailProovedor());
+            proveedor.setNombreEmpresa(this.proveedor.getNombreEmpresa());
+            proveedor.setDireccion(this.proveedor.getDireccion());
+            proveedor.setChatProovedor(this.proveedor.getChatProovedor());
+        }
+
+        return producto;
+    }
+    /**
+     * Mapeo para el caso de más de un ProductoEntity a ProductoDTO
+     * @param productoList
+     * @return listaProductoDTO
+     */
+    public List<ProductoDTO> toProductoList (List<ProductoEntity> productoList){
+    List<ProductoDTO> listaProductoDTO = new ArrayList<>();
+    for(int i=0; i < listaProductoDTO.size(); i ++){
+    listaProductoDTO.add(new ProductoDTO(productoList.get(i)));
+    }
+    return listaProductoDTO;
+    }
+  // Getter and Settter Para poder recibir y enviar los datos de ProductoDTO
+    public Long getCodProducto() {
+        return codProducto;
+    }
+
+    public void setCodProducto(Long codProducto) {
+        this.codProducto = codProducto;
+    }
+
+    public double getValorUnitario() {
+        return valorUnitario;
+    }
+
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
+
+    public int getGarantia() {
+        return garantia;
+    }
+
+    public void setGarantia(int garantia) {
+        this.garantia = garantia;
+    }
+
+    public int getStockDisponible() {
+        return stockDisponible;
+    }
+
+    public void setStockDisponible(int stockDisponible) {
+        this.stockDisponible = stockDisponible;
+    }
+
+    public TipoProductoDTO getTipoProducto() {
+        return tipoProducto;
+    }
+
+    public void setTipoProducto(TipoProductoDTO tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
+
+    public MarcaDTO getMarca() {
+        return marca;
+    }
+
+    public void setMarca(MarcaDTO marca) {
+        this.marca = marca;
+    }
+
+    public ProovedorDTO getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(ProovedorDTO proveedor) {
+        this.proveedor = proveedor;
+    }
 }
