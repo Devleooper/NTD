@@ -20,6 +20,14 @@ import javax.persistence.JoinColumn;
  */
 @Entity (name = "Producto")
 public class ProductoEntity implements Serializable {
+
+    public ProovedorEntity getProovedor() {
+        return proovedor;
+    }
+
+    public void setProovedor(ProovedorEntity proovedor) {
+        this.proovedor = proovedor;
+    }
      /**
      * Controlador de versiones
      * 
