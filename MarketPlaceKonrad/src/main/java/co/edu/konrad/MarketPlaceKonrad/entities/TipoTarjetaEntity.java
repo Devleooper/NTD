@@ -15,6 +15,7 @@ import javax.persistence.Id;
  *
  * @author Juan Diego Bernal
  */
+
 @Entity(name = "Tipo_tarjeta")
 public class TipoTarjetaEntity implements Serializable {
 
