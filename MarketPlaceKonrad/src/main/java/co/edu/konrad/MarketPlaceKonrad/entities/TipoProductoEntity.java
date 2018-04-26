@@ -29,8 +29,8 @@ public class TipoProductoEntity implements Serializable{
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="cod_tipo" , nullable = false , unique = true)
-    private Long codTipo;
+    @Column(name="cod_tipo_producto" , nullable = false , unique = true)
+    private Long codTipoProducto;
     
      /**
      * nombre del tipo producto 
@@ -44,12 +44,12 @@ public class TipoProductoEntity implements Serializable{
     @Column (name = "descripcion", nullable = false)
     private String descripcion;    
     
-        public Long getCodTipo() {
-        return codTipo;
+        public Long getCodTipoProducto() {
+        return codTipoProducto;
     }
 
-    public void setCodTipo(Long codTipo) {
-        this.codTipo = codTipo;
+    public void setCodTipoProducto(Long codTipo) {
+        this.codTipoProducto = codTipo;
     }
 
     public String getNomTipoProducto() {
