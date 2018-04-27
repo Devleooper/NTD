@@ -44,7 +44,7 @@ public class MarcaLogic {
     public MarcaEntity obtenerMarca(Long id){
     MarcaEntity marca = marcaPersistence.find(id);
     if (marca == null){
-    throw new ArithmeticException("La marca solicitada no existe");
+    throw new IllegalArgumentException("La marca solicitada no existe");
     }
     return marca;
     }
