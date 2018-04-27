@@ -24,6 +24,7 @@ public class ApplicationConfig extends Application {
     }
     
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CategoriaProductoResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CategoriaResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CiudadResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.MarcaResource.class);
