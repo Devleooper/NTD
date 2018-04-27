@@ -86,7 +86,7 @@ public class CategoriaResource {
     return new CategoriaDTO(categoriaLogic.actualizarCategoria(id,categoriaActualizada));
     }
         /**
-     * Metodo HTTP-DELETE usado para eliminar un objeto de Proovedor
+     * Metodo HTTP-DELETE usado para eliminar un objeto de Categoria
      *
      * @param id
      */
