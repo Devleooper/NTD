@@ -60,7 +60,7 @@ public class MarcaLogic {
     /**
      * Metodo que genera la peticion de actualizar una Objeto tipo Entity con otros datos
      */
-    public MarcaEntity actualizarMarca(MarcaEntity marcaActualizar){
+    public MarcaEntity actualizarMarca(Long id,MarcaEntity marcaActualizar){
     MarcaEntity marcaActualizada = marcaPersistence.update(marcaActualizar);
     return marcaActualizada;
     }
