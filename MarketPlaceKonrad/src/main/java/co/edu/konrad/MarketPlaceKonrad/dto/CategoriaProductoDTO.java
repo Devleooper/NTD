@@ -117,7 +117,7 @@ public class CategoriaProductoDTO {
      * @param categoriaProductoList
      * @return listaCategoriaProductoDTO
      */
-    public List<CategoriaProductoDTO> listCategoriaProductoDTO(List<CategoriaProductoEntity> listCategoriaProducto) {
+    public static List<CategoriaProductoDTO> listCategoriaProductoDTO(List<CategoriaProductoEntity> listCategoriaProducto) {
         List<CategoriaProductoDTO> listCategoriaProductoDTO = new ArrayList<>();
         for (int i = 0; i < listCategoriaProducto.size(); i++) {
             listCategoriaProductoDTO.add(new CategoriaProductoDTO(listCategoriaProducto.get(i)));
