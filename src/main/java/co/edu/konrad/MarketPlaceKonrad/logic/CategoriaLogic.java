@@ -60,7 +60,7 @@ public class CategoriaLogic {
     /**
      * Metodo que genera la peticion de actualizar una Objeto tipo Entity con otros datos
      */
-    public CategoriaEntity actualizarCategoria(CategoriaEntity categoriaActualizar){
+    public CategoriaEntity actualizarCategoria(Long id,CategoriaEntity categoriaActualizar){
     CategoriaEntity categoriaActualizada = categoriaPersistence.update(categoriaActualizar);
     return categoriaActualizada;
     }
