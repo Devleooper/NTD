@@ -53,7 +53,7 @@ public class CategoriaDTO {
      * @param listCategoria
      * @return listCategoriaDTO
      */
-    public List<CategoriaDTO> toCategoriaList(List<CategoriaEntity> listCategoria) {
+    public static List<CategoriaDTO> toCategoriaList(List<CategoriaEntity> listCategoria) {
         List<CategoriaDTO> listCategoriaDTO = new ArrayList<>();
         for (int i = 0; i < listCategoria.size(); i++) {
             listCategoriaDTO.add(new CategoriaDTO(listCategoria.get(i)));

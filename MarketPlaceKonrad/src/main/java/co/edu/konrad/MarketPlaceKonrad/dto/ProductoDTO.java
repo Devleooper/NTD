@@ -122,7 +122,7 @@ public class ProductoDTO {
      * @param productoList
      * @return listaProductoDTO
      */
-    public List<ProductoDTO> toProductoList(List<ProductoEntity> productoList) {
+    public static List<ProductoDTO> toProductoList(List<ProductoEntity> productoList) {
         List<ProductoDTO> listaProductoDTO = new ArrayList<>();
         for (int i = 0; i < listaProductoDTO.size(); i++) {
             listaProductoDTO.add(new ProductoDTO(productoList.get(i)));

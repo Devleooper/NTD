@@ -11,38 +11,47 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
 import javax.persistence.GenerationType;
+
 /**
+ * Clase que modela la entidad Categoria
  *
  * @author Manuel S. Nino
  */
-@Entity (name = "Categoria")
-public class CategoriaEntity implements Serializable{
+@Entity(name = "Categoria")
+public class CategoriaEntity implements Serializable {
 
-     /**
-     * Controlador de versiones
-     * 
+    /**
+     * Controlador de versiones del Programa
      */
     private final static Long serialVersionUID = 1L;
+
     /**
-     * Codigo categoria
+     * Uso de @Column para asignar el nombre de la columna que depende del
+     * codCategoria Uso de @Id Señala a codCategoria como una llave princial Uso
+     * de @GeneratedValue genera una estrategia de incrementacion a la llave
+     * princial en este caso GenerationType.AUTO Codigo categoria
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column (name = "cod_categoria")
+    @Column(name = "cod_categoria")
     private Long codCategoria;
-    
+
     /**
-     * Nombre de la categoria
+     * Nombre de la nueva columna Nombre de la variable y tipo de objeto que
+     * guardara el dato segun el nombre de la columna y el del mismo.
      */
-    @Column (name = "nom_categoria")
+    @Column(name = "nom_categoria")
     private String NomCategoria;
-    /**
-     * Descripcion de la categoria
-     */
-    @Column (name = "descripcion")
+
+    @Column(name = "descripcion")
     private String descripcionCategoria;
+
     
-        public Long getCodCategoria() {
+    /** Get y set para poder hacer cambios en los datos declarados
+     * 
+     * @return 
+     */ 
+    public Long getCodCategoria() {
         return codCategoria;
     }
 

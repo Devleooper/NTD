@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Manuel S. Nino
  */
-class MarcaDTO {
+public class MarcaDTO {
 
     // Variables tipo DTO de la Marca
     private Long codMarca;
@@ -38,9 +38,10 @@ class MarcaDTO {
     /**
      * Mapeo para el caso más de una MarcaEntity a MarcaDTO
      *
+     * @param marcaList
      * @return listaMarcaDTO
      */
-    public List<MarcaDTO> toMarcaList(List<MarcaEntity> marcaList) {
+    public static List<MarcaDTO> toMarcaList(List<MarcaEntity> marcaList) {
         List<MarcaDTO> listaMarcaDTO = new ArrayList<>();
         for (int i = 0; i < marcaList.size(); i++) {
             listaMarcaDTO.add(new MarcaDTO(marcaList.get(i)));
