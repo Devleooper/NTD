@@ -23,6 +23,7 @@ public class ProductoDTO {
      * Variables tipo DTO del Producto
      *
      */
+    private String nomProducto;
     private Long codProducto;
     private double valorUnitario;
     private int garantia;
@@ -37,19 +38,44 @@ public class ProductoDTO {
      * @param producto
      */
     public ProductoDTO(ProductoEntity producto) {
+        this.nomProducto = producto.getNomProducto();
         this.codProducto = producto.getCodProducto();
         this.valorUnitario = producto.getValorUnitario();
         this.garantia = producto.getGarantia();
         this.stockDisponible = producto.getGarantia();
         if (producto.getTipoProducto() != null) {
-            this.tipoProducto = new TipoProductoDTO(producto.getTipoProducto());
+            TipoProductoEntity tipoProducto = new TipoProductoEntity();
+            tipoProducto.setCodTipoProducto(producto.getTipoProducto().getCodTipoProducto());
+            tipoProducto.setNomTipoProducto(producto.getTipoProducto().getNomTipoProducto());
+            tipoProducto.setDescripcion(producto.getTipoProducto().getDescripcion());
+            this.tipoProducto = new TipoProductoDTO(tipoProducto);
         }
         if (producto.getMarca() != null) {
-            this.marca = new MarcaDTO(producto.getMarca());
+            MarcaEntity marca = new MarcaEntity();
+            marca.setCodMarca(producto.getMarca().getCodMarca());
+            marca.setNomMarca(producto.getMarca().getNomMarca());
+            this.marca = new MarcaDTO(marca);
         }
         if (producto.getProovedor() != null) {
+            ProovedorEntity proveedor = new ProovedorEntity();
+            proveedor.setNitProovedor(producto.getProovedor().getNitProovedor());
+            proveedor.setUsuario(producto.getProovedor().getUsuario());
+            proveedor.setContraseña(producto.getProovedor().getContraseña());
+            proveedor.setAvatar(producto.getProovedor().getAvatar());
+            proveedor.setMailProovedor(producto.getProovedor().getMailProovedor());
+            proveedor.setNombreEmpresa(producto.getProovedor().getNombreEmpresa());
+            proveedor.setDireccion(producto.getProovedor().getDireccion());
+            proveedor.setChatProovedor(producto.getProovedor().getChatProovedor());
             this.proveedor = new ProovedorDTO(producto.getProovedor());
         }
+    }
+
+    public String getNomProducto() {
+        return nomProducto;
+    }
+
+    public void setNomProducto(String nomProducto) {
+        this.nomProducto = nomProducto;
     }
 
     /**
@@ -89,19 +115,22 @@ public class ProductoDTO {
 
         return producto;
     }
+
     /**
      * Mapeo para el caso de más de un ProductoEntity a ProductoDTO
+     *
      * @param productoList
      * @return listaProductoDTO
      */
-    public List<ProductoDTO> toProductoList (List<ProductoEntity> productoList){
-    List<ProductoDTO> listaProductoDTO = new ArrayList<>();
-    for(int i=0; i < listaProductoDTO.size(); i ++){
-    listaProductoDTO.add(new ProductoDTO(productoList.get(i)));
+    public List<ProductoDTO> toProductoList(List<ProductoEntity> productoList) {
+        List<ProductoDTO> listaProductoDTO = new ArrayList<>();
+        for (int i = 0; i < listaProductoDTO.size(); i++) {
+            listaProductoDTO.add(new ProductoDTO(productoList.get(i)));
+        }
+        return listaProductoDTO;
     }
-    return listaProductoDTO;
-    }
-  // Getter and Settter Para poder recibir y enviar los datos de ProductoDTO
+    // Getter and Settter Para poder recibir y enviar los datos de ProductoDTO
+
     public Long getCodProducto() {
         return codProducto;
     }
