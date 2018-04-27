@@ -44,6 +44,9 @@ public class CategoriaLogic {
      */
    public CategoriaEntity obtenerCategoria(Long id){
    CategoriaEntity categoria = categoriaPersistence.find(id);
+   if(categoria == null){
+   throw new IllegalArgumentException("La categoria no se encuentra registrada");
+   }
    return categoria;
    }
     
