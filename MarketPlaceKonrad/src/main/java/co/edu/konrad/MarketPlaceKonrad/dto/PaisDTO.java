@@ -72,7 +72,7 @@ public class PaisDTO {
      * @return 
      */
     
-    public List<PaisDTO> ToPaisList(List<PaisEntity> paisesEn){
+    public static List<PaisDTO> ToPaisList(List<PaisEntity> paisesEn){
         List<PaisDTO> paises =  new  ArrayList<>();
         
         for(int i = 0; i < paisesEn.size(); i++){

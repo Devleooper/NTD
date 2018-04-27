@@ -64,7 +64,7 @@ public class TipoDocumentoDTO {
      * @param tiposEntity
      * @return 
      */
-    public List<TipoDocumentoDTO> toTipoDocumentoList(List<TipoDocumentoEntity> tiposEntity){
+    public  static List<TipoDocumentoDTO> toTipoDocumentoList(List<TipoDocumentoEntity> tiposEntity){
         List<TipoDocumentoDTO> listaTipoDocumentoDTO =new ArrayList<>();
         for(int i = 0; i < tiposEntity.size(); i++){
             listaTipoDocumentoDTO.add(new TipoDocumentoDTO(tiposEntity.get(i)));

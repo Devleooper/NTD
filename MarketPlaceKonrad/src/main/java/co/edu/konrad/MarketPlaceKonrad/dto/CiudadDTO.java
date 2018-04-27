@@ -72,7 +72,7 @@ public class CiudadDTO {
      * @param ciudadesEn
      * @return 
      */
-    public List<CiudadDTO> toCiudadList(List<CiudadEntity> ciudadesEn){
+    public static  List<CiudadDTO> toCiudadList(List<CiudadEntity> ciudadesEn){
         List<CiudadDTO> ciudades =  new ArrayList<>();
         
         for(int i = 0; i < ciudadesEn.size(); i++){

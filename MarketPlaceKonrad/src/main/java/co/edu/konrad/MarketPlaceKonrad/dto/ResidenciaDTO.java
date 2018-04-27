@@ -109,7 +109,7 @@ public class ResidenciaDTO {
      * @return residencias
      */
     
-    public  List<ResidenciaDTO> toResidenciaList (List<ResidenciaEntity> residences){
+    public static List<ResidenciaDTO> toResidenciaList (List<ResidenciaEntity> residences){
         List<ResidenciaDTO> residencias = new ArrayList<>();
         for(int i = 0; i < residences.size(); i++){
             residencias.add(new ResidenciaDTO(residences.get(i)));

@@ -73,7 +73,7 @@ public class ProovedorDTO {
      * @param proves
      * @return 
      */
-    public List<ProovedorDTO> toProovedorList (List<ProovedorEntity> proves){
+    public static List<ProovedorDTO> toProovedorList (List<ProovedorEntity> proves){
         List<ProovedorDTO> proovedores = new ArrayList<>();
         for(int i = 0; i < proves.size(); i++){
             proovedores.add(new ProovedorDTO(proves.get(i)));
