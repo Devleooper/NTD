@@ -5,10 +5,15 @@
  */
 package co.edu.konrad.MarketPlaceKonrad.logic;
 
+import java.util.List;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+
 /**
  *
  * @author juandiego
  */
+@Stateless
 public class TarjetaUsuarioLogic {
-    
+   
 }

@@ -5,10 +5,13 @@
  */
 package co.edu.konrad.MarketPlaceKonrad.logic;
 
+import javax.ejb.Stateless;
+
 /**
  *
  * @author juandiego
  */
+@Stateless
 public class CompraLogic {
     
 }
