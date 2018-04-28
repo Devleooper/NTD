@@ -40,4 +40,22 @@ public class CarritoComprasEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "cod_producto")
     private ProductoEntity producto;
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+
+    public ProductoEntity getProducto() {
+        return producto;
+    }
+
+    public void setProducto(ProductoEntity producto) {
+        this.producto = producto;
+    }
+    
+    
 }
