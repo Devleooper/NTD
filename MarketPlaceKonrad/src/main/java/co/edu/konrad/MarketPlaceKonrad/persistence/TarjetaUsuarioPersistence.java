@@ -5,9 +5,8 @@
  */
 package co.edu.konrad.MarketPlaceKonrad.persistence;
 
-import co.edu.konrad.MarketPlaceKonrad.entities.CarritoComprasEntity;
+import co.edu.konrad.MarketPlaceKonrad.entities.TarjetaUsuarioEntity;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -16,19 +15,18 @@ import javax.persistence.Query;
  *
  * @author juandiego
  */
-@Stateless
-public class CarritoComprasPersistence {
-    
+public class TarjetaUsuarioPersistence {
+     
    @PersistenceContext (unitName = "MarketPlacePU")
    protected EntityManager em;
    
    /**
-    * Obtener todos los elementos de la tabla CarritoCompras
+    * Obtener todos los elementos de la tabla Tarjeta Usuario
     * @return todos los elementos
     */
    
-   public List <CarritoComprasEntity> findAll (){
-   Query todos = em.createQuery("select ce from CarritoComprasEntity ce");
+   public List <TarjetaUsuarioEntity> findAll (){
+   Query todos = em.createQuery("select ce from TarjetaUsuarioEntity ce");
    return todos.getResultList();
    }
    
@@ -37,9 +35,9 @@ public class CarritoComprasPersistence {
     * @param Id
     * @return Elemento correspondiente al id
     */
-    public CarritoComprasEntity find (Long id){
-    CarritoComprasEntity carritoComprasEntity = em.find(CarritoComprasEntity.class, id);
-    return carritoComprasEntity;
+    public TarjetaUsuarioEntity find (Long id){
+    TarjetaUsuarioEntity tarjetaUsuarioEntity = em.find(TarjetaUsuarioEntity.class, id);
+    return tarjetaUsuarioEntity;
     }
     
     /**
@@ -47,9 +45,9 @@ public class CarritoComprasPersistence {
      * @param Elemento a crear
      * @return Elemento creado
      */
-    public CarritoComprasEntity create (CarritoComprasEntity carritoComprasEntity){
-    em.persist(carritoComprasEntity);
-    return carritoComprasEntity;
+    public TarjetaUsuarioEntity create (TarjetaUsuarioEntity tarjetaUsuarioEntity){
+    em.persist(tarjetaUsuarioEntity);
+    return tarjetaUsuarioEntity;
     }
     
     /**
@@ -58,8 +56,8 @@ public class CarritoComprasPersistence {
      * @return Elemento actualizado
      */
     
-    public CarritoComprasEntity update(CarritoComprasEntity carritoComprasActualizado){
-    return em.merge(carritoComprasActualizado);
+    public TarjetaUsuarioEntity update(TarjetaUsuarioEntity tarjetaUsuarioActualizado){
+    return em.merge(tarjetaUsuarioActualizado);
      }
     
     /**
@@ -67,7 +65,7 @@ public class CarritoComprasPersistence {
      * @param id del elemento 
      */
     public void delete (Long id){
-    CarritoComprasEntity carritoComprasEliminar = em.find(CarritoComprasEntity.class, id);
-    em.remove(carritoComprasEliminar);
+    TarjetaUsuarioEntity tarjetaUsuarioEliminar = em.find(TarjetaUsuarioEntity.class, id);
+    em.remove(tarjetaUsuarioEliminar);
     }
 }
