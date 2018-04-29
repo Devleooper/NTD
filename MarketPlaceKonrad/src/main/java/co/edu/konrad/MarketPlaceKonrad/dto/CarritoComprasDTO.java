@@ -102,7 +102,7 @@ public class CarritoComprasDTO {
     pasar lista de dtos a entities
     */
 
-    public List<CarritoComprasDTO> toCarritoComprasList(List<CarritoComprasEntity> carritoComprasList) {
+    public static List<CarritoComprasDTO> toCarritoComprasList(List<CarritoComprasEntity> carritoComprasList) {
         List<CarritoComprasDTO> listaCarritos = new ArrayList<>();
         for (CarritoComprasEntity carrito : carritoComprasList) {
             listaCarritos.add(new CarritoComprasDTO(carrito));

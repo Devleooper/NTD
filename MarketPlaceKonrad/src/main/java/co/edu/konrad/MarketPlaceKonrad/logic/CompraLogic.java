@@ -27,7 +27,7 @@ public class CompraLogic {
      * @return marcas Metodo que genera la peticion de una Lista con Objetos de
      * una Entity
      */
-    public List<CompraEntity> obtenerCarritoCompras() {
+    public List<CompraEntity> obtenerCompras() {
         List<CompraEntity> listCompras = compraPersistence.findAll();
         return listCompras;
     }

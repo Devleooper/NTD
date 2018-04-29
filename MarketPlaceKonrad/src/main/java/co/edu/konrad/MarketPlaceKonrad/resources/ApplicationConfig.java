@@ -24,15 +24,18 @@ public class ApplicationConfig extends Application {
     }
     
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CarritoComprasResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CategoriaProductoResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CategoriaResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CiudadResource.class);
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.CompraResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.MarcaResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.PaisResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.ProductoResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.ProovedorResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.ResidenciaResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.RolResource.class);
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TarjetaUsuarioResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TipoDocumentoResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.UsuarioResource.class);
     }

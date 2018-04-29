@@ -129,7 +129,7 @@ public class TarjetaUsuarioDTO {
     pasar lista de dtos a entities
     */
 
-    public List<TarjetaUsuarioDTO> toTarjetaUsuarioList(List<TarjetaUsuarioEntity> tajetaUsuarioList) {
+    public static List<TarjetaUsuarioDTO> toTarjetaUsuarioList(List<TarjetaUsuarioEntity> tajetaUsuarioList) {
         List<TarjetaUsuarioDTO> listatarjetasUsuario = new ArrayList<>();
         for (TarjetaUsuarioEntity tarjeta : tajetaUsuarioList) {
             listatarjetasUsuario.add(new TarjetaUsuarioDTO(tarjeta));

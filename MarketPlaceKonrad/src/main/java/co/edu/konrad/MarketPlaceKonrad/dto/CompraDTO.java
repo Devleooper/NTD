@@ -157,7 +157,7 @@ public class CompraDTO {
         return compra;
     }
 
-    public List<CompraDTO> toCompraList(List<CompraEntity> compraList) {
+    public static List<CompraDTO> toCompraList(List<CompraEntity> compraList) {
         List<CompraDTO> listaCompras = new ArrayList<>();
         for (CompraEntity compra : compraList) {
             listaCompras.add(new CompraDTO(compra));
