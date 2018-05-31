@@ -48,8 +48,8 @@ public class TipoTarjetaResource {
     } 
     
     @POST
-    public TipoTarjetaDTO createTipoTarjeta(TipoTarjetaEntity tipoTarjetaEntity){
-    return new TipoTarjetaDTO(tipoTarjetaLogic.crearTipoTarjeta(tipoTarjetaEntity));
+    public TipoTarjetaDTO createTipoTarjeta(TipoTarjetaDTO tipoTarjetaDTO){
+    return new TipoTarjetaDTO(tipoTarjetaLogic.crearTipoTarjeta(tipoTarjetaDTO.toEntity()));
     } 
     
     @PUT
