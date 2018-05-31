@@ -22,54 +22,65 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * Servicios REST para TipoTarjeta
+ *
  * @author ManuelS
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("/tipoTarjeta")
 public class TipoTarjetaResource {
+
     @EJB
     private TipoTarjetaLogic tipoTarjetaLogic;
-    
+
     @GET
-    public List<TipoTarjetaDTO> getTipoTarjetaList(){
-    List<TipoTarjetaEntity> tipoTarjetas = tipoTarjetaLogic.obtenerTipoTarjeta();
-    return TipoTarjetaDTO.toTipoTarjetaList(tipoTarjetas);
+    public List<TipoTarjetaDTO> getTipoTarjetaList() {
+        List<TipoTarjetaEntity> tipoTarjetas = tipoTarjetaLogic.obtenerTipoTarjeta();
+        return TipoTarjetaDTO.toTipoTarjetaList(tipoTarjetas);
     }
-    
+
     @GET
     @Path("{id: \\d+}")
-    public TipoTarjetaDTO getTipoTarjeta(@PathParam("id") Long id){
-    TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
-    if (tipoTarjeta == null){
-    throw new RuntimeException("El tipo de tarjeta solicitado no existe!");
+    public TipoTarjetaDTO getTipoTarjeta(@PathParam("id") Long id) {
+        TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
+        if (tipoTarjeta == null) {
+            throw new RuntimeException("El tipo de tarjeta solicitado no existe!");
+        }
+        return new TipoTarjetaDTO(tipoTarjeta);
     }
-    return new TipoTarjetaDTO(tipoTarjeta);
-    } 
-    
+
     @POST
-    public TipoTarjetaDTO createTipoTarjeta(TipoTarjetaEntity tipoTarjetaEntity){
-    return new TipoTarjetaDTO(tipoTarjetaLogic.crearTipoTarjeta(tipoTarjetaEntity));
-    } 
-    
+    public TipoTarjetaDTO createTipoTarjeta(TipoTarjetaDTO tipoTarjetaDTO) {
+        return new TipoTarjetaDTO(tipoTarjetaLogic.crearTipoTarjeta(tipoTarjetaDTO.toEntity()));
+    }
+
     @PUT
     @Path("{id: \\d+}")
+<<<<<<< HEAD
     public TipoTarjetaDTO updateTipoTarjeta(@PathParam("id") Long id , TipoTarjetaDTO tipotarjetadto){
     TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
     if (tipoTarjeta == null){
     throw new RuntimeException("El tipo de tarjeta  a actualizarno existe!");
     }
     return new TipoTarjetaDTO(tipoTarjetaLogic.actualizarTipoTarjeta(id, tipotarjetadto.toEntity()));
+=======
+    public TipoTarjetaDTO updateTipoTarjeta(@PathParam("id") Long id) {
+        TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
+        if (tipoTarjeta == null) {
+            throw new RuntimeException("El tipo de tarjeta  a actualizarno existe!");
+        }
+        return new TipoTarjetaDTO(tipoTarjetaLogic.actualizarTipoTarjeta(id, TipoTarjetaDTO.toEntity()));
+>>>>>>> 33eb5cff5d423f4f0e44f1f4600299aa2a85a700
     }
-    
+
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteTipoTarjeta(@PathParam("id") Long id){
-    TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
-    if(tipoTarjeta == null){
-    throw new RuntimeException("El tipo de tarjeta a eliminar no existe!");
+    public void deleteTipoTarjeta(@PathParam("id") Long id) {
+        TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
+        if (tipoTarjeta == null) {
+            throw new RuntimeException("El tipo de tarjeta a eliminar no existe!");
+        }
+        tipoTarjetaLogic.eliminarTipoTarjeta(id);
     }
-    tipoTarjetaLogic.eliminarTipoTarjeta(id);
-    }
-    
+
 }
