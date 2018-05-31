@@ -29,7 +29,7 @@ public class TipoProductoEntity implements Serializable{
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="cod_tipo_producto" , nullable = false , unique = true)
+    @Column(name="cod_tipo_producto" , nullable = false )
     private Long codTipoProducto;
     
      /**

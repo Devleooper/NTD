@@ -26,7 +26,7 @@ public class TipoDocumentoEntity implements Serializable{
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_tipo_documento", unique = true, nullable = false)
+    @Column(name = "cod_tipo_documento", nullable = false)
     private Long idtipo;
     /**
      * Nombre del tipo de documento

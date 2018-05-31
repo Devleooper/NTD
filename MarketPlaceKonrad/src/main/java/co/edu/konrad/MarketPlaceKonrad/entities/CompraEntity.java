@@ -28,7 +28,7 @@ public class CompraEntity implements Serializable {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_compra", unique = true, nullable = false)
+    @Column(name = "cod_compra", nullable = false)
     private Long codCompra;
 
     /**

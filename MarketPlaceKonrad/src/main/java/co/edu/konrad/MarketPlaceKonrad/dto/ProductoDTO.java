@@ -37,6 +37,12 @@ public class ProductoDTO {
      *
      * @param producto
      */
+    
+    
+    public ProductoDTO(){
+        
+    }
+    
     public ProductoDTO(ProductoEntity producto) {
         this.nomProducto = producto.getNomProducto();
         this.codProducto = producto.getCodProducto();

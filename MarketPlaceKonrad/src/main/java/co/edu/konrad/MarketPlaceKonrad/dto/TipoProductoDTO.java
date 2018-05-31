@@ -23,11 +23,19 @@ class TipoProductoDTO {
 
     private String descripcion;
 
+    
+    
+    
+    public TipoProductoDTO(){
+        
+    }
     /**
      * Mapeo TipoProductoEntity a TipoProductoDTO
      *
      * @param tipoProducto
      */
+    
+    
     public TipoProductoDTO(TipoProductoEntity tipoProducto) {
         this.codTipoProducto = tipoProducto.getCodTipoProducto();
         this.nomTipoProducto = tipoProducto.getNomTipoProducto();

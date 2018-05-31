@@ -30,6 +30,10 @@ public class CategoriaDTO {
      *
      * @param categoria
      */
+    
+    public CategoriaDTO(){
+        
+    }
     public CategoriaDTO(CategoriaEntity categoria) {
         this.codCategoria = categoria.getCodCategoria();
         this.NomCategoria = categoria.getNomCategoria();

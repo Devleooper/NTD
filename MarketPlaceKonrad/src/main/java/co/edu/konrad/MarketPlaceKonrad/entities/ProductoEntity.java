@@ -21,13 +21,7 @@ import javax.persistence.JoinColumn;
 @Entity (name = "Producto")
 public class ProductoEntity implements Serializable {
 
-    public ProovedorEntity getProovedor() {
-        return proovedor;
-    }
-
-    public void setProovedor(ProovedorEntity proovedor) {
-        this.proovedor = proovedor;
-    }
+   
      /**
      * Controlador de versiones
      * 
@@ -39,7 +33,7 @@ public class ProductoEntity implements Serializable {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="cod_producto" , nullable = false , unique = true)
+    @Column(name="cod_producto" , nullable = false )
     private Long codProducto;
     
      /**
@@ -142,4 +136,14 @@ public class ProductoEntity implements Serializable {
     public void setMarca(MarcaEntity marca) {
         this.marca = marca;
     }
+    
+    
+     public ProovedorEntity getProovedor() {
+        return proovedor;
+    }
+
+    public void setProovedor(ProovedorEntity proovedor) {
+        this.proovedor = proovedor;
+    }
+    
 }

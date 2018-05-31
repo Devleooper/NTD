@@ -30,6 +30,7 @@ public class CarritoComprasEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ManyToOne
     @JoinColumn(name = "id_usuario")
+    
     private UsuarioEntity usuario;
     
     /**
@@ -39,6 +40,7 @@ public class CarritoComprasEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ManyToOne
     @JoinColumn(name = "cod_producto")
+   
     private ProductoEntity producto;
 
     public UsuarioEntity getUsuario() {

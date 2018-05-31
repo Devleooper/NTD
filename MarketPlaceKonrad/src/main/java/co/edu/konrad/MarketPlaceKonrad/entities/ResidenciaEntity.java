@@ -28,7 +28,7 @@ public class ResidenciaEntity implements Serializable {
     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_Residencia", unique = true, nullable = false)
+    @Column(name = "cod_Residencia", nullable = false)
     private Long codResidencia;
     /**
      * Nombre de la residencia 

@@ -21,6 +21,12 @@ public class MarcaDTO {
 
     private String nomMarca;
 
+    
+    
+    
+    public MarcaDTO(){
+        
+    }
     //Mapeo MarcaEntity a MarcaDTO
     public MarcaDTO(MarcaEntity marca) {
         this.codMarca = marca.getCodMarca();

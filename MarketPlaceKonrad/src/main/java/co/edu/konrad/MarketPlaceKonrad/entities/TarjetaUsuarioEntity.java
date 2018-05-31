@@ -28,7 +28,7 @@ public class TarjetaUsuarioEntity implements Serializable {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_tarjeta", unique = true, nullable = false)
+    @Column(name = "cod_tarjeta", nullable = false)
     private Long codTarjeta;
 
     /**

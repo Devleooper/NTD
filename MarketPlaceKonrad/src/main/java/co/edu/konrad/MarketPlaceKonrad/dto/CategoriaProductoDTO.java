@@ -35,6 +35,11 @@ public class CategoriaProductoDTO {
      *
      * @param categoriaProducto
      */
+    
+    
+    public CategoriaProductoDTO(){
+        
+    }
     public CategoriaProductoDTO(CategoriaProductoEntity categoriaProducto) {
         this.codCategoriaProducto = categoriaProducto.getCodCategoriaProducto();
         if (categoriaProducto.getCodCategoria() != null) {

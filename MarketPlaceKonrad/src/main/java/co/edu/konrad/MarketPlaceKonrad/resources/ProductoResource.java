@@ -14,6 +14,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -32,6 +33,7 @@ public class ProductoResource {
     @EJB
     ProductoLogic productoLogic;
     
+     @GET
     public List<ProductoDTO> getProductos (){
     List<ProductoEntity> productos = productoLogic.obtenerProductos();
         return ProductoDTO.toProductoList(productos);
@@ -76,6 +78,7 @@ public class ProductoResource {
      * @param 
      * @return
      */
+    @PUT
     @Path("{id: \\d+}")
     public ProductoDTO updateProducto(@PathParam("id")Long id, ProductoDTO productoActualizar){
     ProductoEntity productoActualizado = productoLogic.obtenerProducto(id);

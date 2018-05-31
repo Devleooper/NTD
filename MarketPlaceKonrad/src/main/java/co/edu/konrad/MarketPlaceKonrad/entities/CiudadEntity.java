@@ -28,7 +28,7 @@ public class CiudadEntity implements Serializable{
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="cod_ciudad" , nullable = false , unique = true)
+    @Column(name="cod_ciudad" , nullable = false )
     private Long codCiudad;
     
     /**

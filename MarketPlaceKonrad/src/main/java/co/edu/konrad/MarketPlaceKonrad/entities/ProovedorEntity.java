@@ -24,7 +24,7 @@ public class ProovedorEntity implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="nit_proovedor" , nullable = false , unique = true)
+    @Column(name="nit_proovedor" , nullable = false )
     /**
      * nit del proovedor - llave primaria
      */

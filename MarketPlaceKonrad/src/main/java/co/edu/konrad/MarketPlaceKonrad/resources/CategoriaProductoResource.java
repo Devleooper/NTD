@@ -14,6 +14,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -26,12 +27,14 @@ import javax.ws.rs.core.MediaType;
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/categoria")
+@Path("/categoriaProducto")
 public class CategoriaProductoResource {
 
     @EJB
     CategoriaProductoLogic categoriaProductoLogic;
     
+    
+    @GET
     public List<CategoriaProductoDTO> getCategorias (){
     List<CategoriaProductoEntity> categoriaProductos = categoriaProductoLogic.obtenerCategoriaProductos();
         return  CategoriaProductoDTO.listCategoriaProductoDTO(categoriaProductos);
@@ -76,6 +79,7 @@ public class CategoriaProductoResource {
      * @param 
      * @return
      */
+    @PUT
     @Path("{id: \\d+}")
     public CategoriaProductoDTO updateCategoria(@PathParam("id")Long id, CategoriaProductoDTO categoriaActualizar){
     CategoriaProductoEntity categoriaActualizada = categoriaProductoLogic.obtenerCategoriaProducto(id);

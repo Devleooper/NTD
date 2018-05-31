@@ -26,7 +26,7 @@ public class PaisEntity implements Serializable{
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_pais", unique = true, nullable = false)
+    @Column(name = "cod_pais", nullable = false)
     private Long codPais;
     /**
      * Nombre del pais

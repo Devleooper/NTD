@@ -26,7 +26,7 @@ import javax.ws.rs.core.MediaType;
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/Compra")
+@Path("/TarjetasUsuario")
 public class TarjetaUsuarioResource {
     @EJB
     private TarjetaUsuarioLogic tarjetaUsuarioLogic;

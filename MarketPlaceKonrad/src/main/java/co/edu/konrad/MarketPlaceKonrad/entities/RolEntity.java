@@ -26,7 +26,7 @@ public class RolEntity implements Serializable{
     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cod_rol", unique = true, nullable = false)
+    @Column(name = "cod_rol", nullable = false)
     private Long idRol;
     
     /**

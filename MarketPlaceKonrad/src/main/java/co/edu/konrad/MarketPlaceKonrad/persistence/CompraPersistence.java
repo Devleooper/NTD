@@ -7,6 +7,7 @@ package co.edu.konrad.MarketPlaceKonrad.persistence;
 
 import co.edu.konrad.MarketPlaceKonrad.entities.CompraEntity;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -15,6 +16,7 @@ import javax.persistence.Query;
  *
  * @author juandiego
  */
+@Stateless
 public class CompraPersistence {
 
     @PersistenceContext(unitName = "MarketPlacePU")
