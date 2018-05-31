@@ -31,7 +31,7 @@ public class CategoriaProductoLogic {
      * una Entity
      */
     public List<CategoriaProductoEntity> obtenerCategoriaProductos() {
-        List<CategoriaProductoEntity> categoriaProductos = categoriaProductoPersistence.finAll();
+        List<CategoriaProductoEntity> categoriaProductos = categoriaProductoPersistence.findAll();
         return categoriaProductos;
     }
 

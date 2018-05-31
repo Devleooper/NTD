@@ -22,7 +22,7 @@ public class CategoriaProductoPersistence {
     /**
      * Obtener todos los elementos de la tabla CategoriaProducto
      */
-        public List <CategoriaProductoEntity> finAll (){
+        public List <CategoriaProductoEntity> findAll (){
         Query todos = em.createQuery("select cpe from Categoria_producto cpe");
         return todos.getResultList();    
     }
