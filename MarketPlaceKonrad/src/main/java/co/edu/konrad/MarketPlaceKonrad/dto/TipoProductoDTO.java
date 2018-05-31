@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Manuel S. Nino
  */
-class TipoProductoDTO {
+public class TipoProductoDTO {
     // Variables tipo DTO para TipoProducto
 
     private Long codTipoProducto;
@@ -61,7 +61,7 @@ class TipoProductoDTO {
      * @param tipoProductoList
      * @return listaTipoProductoDTo
      */
-    public List<TipoProductoDTO> toTipoProductoList(List<TipoProductoEntity> tipoProductoList) {
+    public static List<TipoProductoDTO> toTipoProductoList(List<TipoProductoEntity> tipoProductoList) {
         List<TipoProductoDTO> listaTipoProductoDTo = new ArrayList<>();
         for (int i = 0; i < tipoProductoList.size(); i++) {
             listaTipoProductoDTo.add(new TipoProductoDTO(tipoProductoList.get(i)));
