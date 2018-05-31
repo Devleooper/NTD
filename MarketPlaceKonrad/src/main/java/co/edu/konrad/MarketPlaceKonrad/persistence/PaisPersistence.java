@@ -32,7 +32,7 @@ public class PaisPersistence {
      * 
      */
      public List <PaisEntity> findAll(){
-        Query todos = em.createQuery("select ec from PaisEntity ec");
+        Query todos = em.createQuery("select ec from Pais ec");
         return todos.getResultList();
     }
      

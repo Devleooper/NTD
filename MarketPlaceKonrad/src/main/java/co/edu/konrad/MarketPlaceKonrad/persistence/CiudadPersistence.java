@@ -29,7 +29,7 @@ public class CiudadPersistence {
      * 
      */
      public List <CiudadEntity> findAll(){
-        Query todos = em.createQuery("select ec from CiudadEntity ec");
+        Query todos = em.createQuery("select ec from Ciudad ec");
         return todos.getResultList();
     }
      

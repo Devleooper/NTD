@@ -6,7 +6,7 @@
 package co.edu.konrad.MarketPlaceKonrad.logic;
 
 import co.edu.konrad.MarketPlaceKonrad.entities.CategoriaProductoEntity;
-import co.edu.konrad.MarketPlaceKonrad.persistence.CategoriaProductoPersistece;
+import co.edu.konrad.MarketPlaceKonrad.persistence.CategoriaProductoPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -24,7 +24,7 @@ public class CategoriaProductoLogic {
      * Declaracion de la injeccion en la clase CategoriaMPersistence
      */
     @Inject
-    CategoriaProductoPersistece categoriaProductoPersistence;
+    CategoriaProductoPersistence categoriaProductoPersistence;
 
     /**
      * @return marcas Metodo que genera la peticion de una Lista con Objetos de

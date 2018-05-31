@@ -28,7 +28,7 @@ public class CompraPersistence {
      * @return todos los elementos
      */
     public List<CompraEntity> findAll() {
-        Query todos = em.createQuery("select ce from CompraEntity ce");
+        Query todos = em.createQuery("select ce from Compra ce");
         return todos.getResultList();
     }
 

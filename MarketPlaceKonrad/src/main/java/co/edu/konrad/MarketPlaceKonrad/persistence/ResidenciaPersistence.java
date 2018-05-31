@@ -29,7 +29,7 @@ public class ResidenciaPersistence {
      * 
      */
      public List <ResidenciaEntity> findAll(){
-        Query todos = em.createQuery("select ec from ResidenciaEntity ec");
+        Query todos = em.createQuery("select ec from Residencia ec");
         return todos.getResultList();
     }
      

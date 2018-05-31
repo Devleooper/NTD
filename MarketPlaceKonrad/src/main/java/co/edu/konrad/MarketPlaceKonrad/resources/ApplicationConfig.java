@@ -37,6 +37,8 @@ public class ApplicationConfig extends Application {
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.RolResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TarjetaUsuarioResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TipoDocumentoResource.class);
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TipoProductoResource.class);
+        resources.add(co.edu.konrad.MarketPlaceKonrad.resources.TipoTarjetaResource.class);
         resources.add(co.edu.konrad.MarketPlaceKonrad.resources.UsuarioResource.class);
     }
     

@@ -29,7 +29,7 @@ public class RolPersistence {
      * 
      */
      public List <RolEntity> findAll(){
-        Query todos = em.createQuery("select ec from RolEntity ec");
+        Query todos = em.createQuery("select ec from rol ec");
         return todos.getResultList();
     }
      

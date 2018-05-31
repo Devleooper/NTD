@@ -28,7 +28,7 @@ public class TarjetaUsuarioPersistence {
     */
    
    public List <TarjetaUsuarioEntity> findAll (){
-   Query todos = em.createQuery("select ce from TarjetaUsuarioEntity ce");
+   Query todos = em.createQuery("select ce from Tarjeta_usuario ce");
    return todos.getResultList();
    }
    

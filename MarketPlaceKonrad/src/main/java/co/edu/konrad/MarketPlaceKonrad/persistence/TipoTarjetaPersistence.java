@@ -27,7 +27,7 @@ public class TipoTarjetaPersistence {
      * @return Lista de datos de la tabla Tipo Tarjeta
      */
     public List<TipoTarjetaEntity> findAll(){
-        Query todos = em.createQuery("select e from TipoTarjetaEntity e");
+        Query todos = em.createQuery("select e from Tipo_tarjeta e");
         return todos.getResultList();
     }
     

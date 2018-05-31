@@ -29,7 +29,7 @@ public class ProductoPersistence {
      * 
      */
      public List <ProductoEntity> findAll(){
-        Query todos = em.createQuery("select pe from ProductoEntity pe");
+        Query todos = em.createQuery("select pe from Producto pe");
         return todos.getResultList();
     }
           

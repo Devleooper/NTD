@@ -29,7 +29,7 @@ public class ProovedorPersistence {
      * 
      */
      public List <ProovedorEntity> findAll(){
-        Query todos = em.createQuery("select ec from ProovedorEntity ec");
+        Query todos = em.createQuery("select ec from Proovedor ec");
         return todos.getResultList();
     }
      

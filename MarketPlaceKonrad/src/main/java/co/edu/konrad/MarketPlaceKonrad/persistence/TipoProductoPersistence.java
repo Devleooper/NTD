@@ -28,7 +28,7 @@ public class TipoProductoPersistence {
      * @return Lista de los elementos
      */
     public List<TipoProductoEntity> findAll() {
-        Query todos = em.createQuery("select tp TipoProductoEntity tp");
+        Query todos = em.createQuery("select tp  from Tipo_producto tp");
         return todos.getResultList();
     }
 
@@ -59,7 +59,7 @@ public class TipoProductoPersistence {
      * @param Objeto a agregar
      * @return Objeto agregado
      */
-    public TipoProductoEntity delete(TipoProductoEntity tipoProductoEntityNuevo) {
+    public TipoProductoEntity create(TipoProductoEntity tipoProductoEntityNuevo) {
         em.persist(tipoProductoEntityNuevo);
         return tipoProductoEntityNuevo;
     }

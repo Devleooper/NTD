@@ -54,12 +54,12 @@ public class TipoTarjetaResource {
     
     @PUT
     @Path("{id: \\d+}")
-    public TipoTarjetaDTO updateTipoTarjeta(@PathParam("id") Long id){
+    public TipoTarjetaDTO updateTipoTarjeta(@PathParam("id") Long id , TipoTarjetaDTO tipotarjetadto){
     TipoTarjetaEntity tipoTarjeta = tipoTarjetaLogic.obtenerTipoTarjeta(id);
     if (tipoTarjeta == null){
     throw new RuntimeException("El tipo de tarjeta  a actualizarno existe!");
     }
-    return new TipoTarjetaDTO(tipoTarjetaLogic.actualizarTipoTarjeta(id, tipoTarjeta));
+    return new TipoTarjetaDTO(tipoTarjetaLogic.actualizarTipoTarjeta(id, tipotarjetadto.toEntity()));
     }
     
     @DELETE

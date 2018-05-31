@@ -28,7 +28,7 @@ public class CarritoComprasPersistence {
     */
    
    public List <CarritoComprasEntity> findAll (){
-   Query todos = em.createQuery("select ce from CarritoComprasEntity ce");
+   Query todos = em.createQuery("select e from Carrito_compras e");
    return todos.getResultList();
    }
    

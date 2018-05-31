@@ -6,7 +6,6 @@ C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\kon
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\MarcaResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\UsuarioResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\entities\TipoTarjetaEntity.java
-C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\CategoriaProductoPersistece.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\UsuarioPersistence.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\MarcaDTO.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\UsuarioDTO.java
@@ -40,10 +39,12 @@ C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\kon
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\CompraResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\RolResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\CarritoComprasDTO.java
+C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\TipoProductoResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\CategoriaResource.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\PaisPersistence.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\ProductoPersistence.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\resources\ResidenciaResource.java
+C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\logic\TipoProductoLogic.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\entities\PaisEntity.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\CategoriaDTO.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\TipoProductoPersistence.java
@@ -68,6 +69,7 @@ C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\kon
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\entities\CategoriaProductoEntity.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\logic\CompraLogic.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\logic\CarritoComprasLogic.java
+C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\CategoriaProductoPersistence.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\ResidenciaDTO.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\persistence\CategoriaPersistence.java
 C:\Users\Asus-Pc\Documents\GitHub\NTD\MarketPlaceKonrad\src\main\java\co\edu\konrad\MarketPlaceKonrad\dto\RolDTO.java

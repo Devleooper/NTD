@@ -29,7 +29,7 @@ public class UsuarioPersistence {
      * 
      */
      public List <UsuarioEntity> findAll(){
-        Query todos = em.createQuery("select ec from UsuarioEntity ec");
+        Query todos = em.createQuery("select ec from Usuario ec");
         return todos.getResultList();
     }
      

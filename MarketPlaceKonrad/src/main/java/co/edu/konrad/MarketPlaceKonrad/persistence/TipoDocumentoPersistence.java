@@ -30,7 +30,7 @@ public class TipoDocumentoPersistence {
      * 
      */
      public List <TipoDocumentoEntity> findAll(){
-        Query todos = em.createQuery("select ec from TipoDocumentoEntity ec");
+        Query todos = em.createQuery("select ec from tipo_documento ec");
         return todos.getResultList();
     }
      
