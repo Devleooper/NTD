@@ -1,0 +1,1039 @@
+{
+	"info": {
+		"_postman_id": "d6dfbb5b-cca5-4c1b-a053-9da906ad350b",
+		"name": "Temp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[BH6-AppU] Customer Accounts : Cuentas del Cliente. Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "26c143b6-e890-4054-9b4e-6fbb8f1ba3d5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "27198500-4ce3-470c-bd84-06a53505dd1a",
+						"exec": [
+							"var response = JSON.parse(responseBody);",
+							"",
+							"// Exitoso",
+							"/*",
+							"{",
+							"    \"header\": [],",
+							"    \"data\": {",
+							"        \"products\": {",
+							"            \"accounts\": [",
+							"                {",
+							"                    \"product_name\": \"Cuenta de Ahorro NÃ³mina\",",
+							"                    \"product_id\": \"054167113\",",
+							"                    \"product_sub_type\": \"218\",",
+							"                    \"product_parent\": \"A\",",
+							"                    \"product_state\": \"Active\",",
+							"                    \"amount\": {",
+							"                        \"currency\": \"COP\",",
+							"                        \"symbol\": \"$\",",
+							"                        \"signal\": \"+\",",
+							"                        \"value\": 8554607.56",
+							"                    }",
+							"                }",
+							"            ],",
+							"            \"investments\": [],",
+							"            \"loans\": [",
+							"                {",
+							"                    \"product_name\": \"CUPO PLUS CONSUMO\",",
+							"                    \"product_id\": \"254000020\",",
+							"                    \"product_sub_type\": \"127\",",
+							"                    \"product_parent\": \"L\",",
+							"                    \"product_state\": \"Active\",",
+							"                    \"amount\": {",
+							"                        \"currency\": \"COP\",",
+							"                        \"symbol\": \"$\",",
+							"                        \"signal\": \"-\",",
+							"                        \"value\": 1277799.72",
+							"                    }",
+							"                }",
+							"            ]",
+							"        }",
+							"    },",
+							"    \"flow\": [],",
+							"    \"securityData\": null,",
+							"    \"sdkData\": null,",
+							"    \"statusCode\": 200",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "op",
+						"type": "text",
+						"value": "{{op_customer_accounts}}"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{x_auth_token}}"
+					},
+					{
+						"key": "cdata",
+						"type": "text",
+						"value": "false"
+					},
+					{
+						"key": "ajaxrequest",
+						"type": "text",
+						"value": "true",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": [\n        {\n            \"key\": \"destination\",\n            \"value\": \"ownAcctSourceAccounts\"\n        }\n    ],\n    \"path\": [],\n    \"header\": [],\n    \"body\": {}\n}"
+				},
+				"url": {
+					"raw": "{{router_homo}}/router-app/router/latam",
+					"host": [
+						"{{router_homo}}"
+					],
+					"path": [
+						"router-app",
+						"router",
+						"latam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BH7-AppU] Enrolled Accounts : Cuentas Inscritas de un Cliente. Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "26c143b6-e890-4054-9b4e-6fbb8f1ba3d5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "27198500-4ce3-470c-bd84-06a53505dd1a",
+						"exec": [
+							"var response = JSON.parse(responseBody);",
+							"",
+							"// Exitoso",
+							"/*",
+							"{",
+							"    \"header\": [],",
+							"    \"data\": {",
+							"        \"products\": {",
+							"            \"accounts\": [",
+							"                {",
+							"                    \"product_name\": \"Cuenta de Ahorro NÃ³mina\",",
+							"                    \"product_id\": \"054167113\",",
+							"                    \"product_sub_type\": \"218\",",
+							"                    \"product_parent\": \"A\",",
+							"                    \"product_state\": \"Active\",",
+							"                    \"amount\": {",
+							"                        \"currency\": \"COP\",",
+							"                        \"symbol\": \"$\",",
+							"                        \"signal\": \"+\",",
+							"                        \"value\": 8554607.56",
+							"                    }",
+							"                }",
+							"            ],",
+							"            \"investments\": [],",
+							"            \"loans\": [",
+							"                {",
+							"                    \"product_name\": \"CUPO PLUS CONSUMO\",",
+							"                    \"product_id\": \"254000020\",",
+							"                    \"product_sub_type\": \"127\",",
+							"                    \"product_parent\": \"L\",",
+							"                    \"product_state\": \"Active\",",
+							"                    \"amount\": {",
+							"                        \"currency\": \"COP\",",
+							"                        \"symbol\": \"$\",",
+							"                        \"signal\": \"-\",",
+							"                        \"value\": 1277799.72",
+							"                    }",
+							"                }",
+							"            ]",
+							"        }",
+							"    },",
+							"    \"flow\": [],",
+							"    \"securityData\": null,",
+							"    \"sdkData\": null,",
+							"    \"statusCode\": 200",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "op",
+						"type": "text",
+						"value": "{{op_enrolled_accounts}}"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{x_auth_token}}"
+					},
+					{
+						"key": "cdata",
+						"type": "text",
+						"value": "false"
+					},
+					{
+						"key": "ajaxrequest",
+						"type": "text",
+						"value": "true",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{router_desa}}/router-app/router/latam",
+					"host": [
+						"{{router_desa}}"
+					],
+					"path": [
+						"router-app",
+						"router",
+						"latam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BL15-AppU] Get Question Security : Obtener pregunta seguridad",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "26c143b6-e890-4054-9b4e-6fbb8f1ba3d5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "27198500-4ce3-470c-bd84-06a53505dd1a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "op",
+						"value": "OAXLBMJg5BnrNBfefPMe+w==;"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{x_auth_token}}"
+					},
+					{
+						"key": "cdata",
+						"value": "false"
+					},
+					{
+						"key": "ajaxrequest",
+						"value": "true",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"body\": {\r\n    \"name\": \"Andrea Maria Lagos\",\r\n    \"document\": {\r\n      \"type\": \"1\",\r\n      \"number\": \"1211235568\"\r\n    },\r\n    \"account\": {\r\n      \"type\": \"1\",\r\n      \"number\": \"212214458\"\r\n    },\r\n   \"bank_id\": \"007\"\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{router_homo}}/router-app/router/latam",
+					"host": [
+						"{{router_homo}}"
+					],
+					"path": [
+						"router-app",
+						"router",
+						"latam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BL15-AppU] Validate response and enroll: Validar respuesta e inscribir",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "26c143b6-e890-4054-9b4e-6fbb8f1ba3d5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "27198500-4ce3-470c-bd84-06a53505dd1a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "op",
+						"value": "{{op_validate}}"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{x_auth_token}}"
+					},
+					{
+						"key": "cdata",
+						"value": "false"
+					},
+					{
+						"key": "ajaxrequest",
+						"value": "true",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"body\": {\r\n    \"question_id\": \"Q3.10\",\r\n    \"question\": \"¿En que parroquia te bautizaron?\",\r\n    \"response\": \"11\"\r\n  }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{router_homo}}/router-app/router/latam",
+					"host": [
+						"{{router_homo}}"
+					],
+					"path": [
+						"router-app",
+						"router",
+						"latam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[OSB-D11] Transfer cost: Costo transferencia PHOENIX.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aa5e7568-5472-48dc-8cbf-bfa2e03530d9",
+						"exec": [
+							"// P79777889 - Carlos Alejandro Arenas",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"79777889\";",
+							"",
+							"// P19436761 - Alejandro Adolfo Chaves",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"19436761\";",
+							"",
+							"// P52855362 - Sandra Patricia Acosta",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"52855362\";",
+							"",
+							"// P1003314187 - Jose David Lopez",
+							"// var tipo_id_client = \"4\";",
+							"// var id_client = \"1003314187\";",
+							"",
+							"// P30405094 - Ana Maria Rodriguez",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"30405094\";",
+							"",
+							"// P19383901 - Ruben Dario Acosta",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"19383901\";",
+							"",
+							"// P79462733 - Humberto Mora",
+							"var tipo_id_client = \"1\";",
+							"var id_client = \"79462733\";",
+							"",
+							"",
+							"// -----------------------------------------------",
+							"pm.environment.set(\"tipo_id_client\", tipo_id_client);",
+							"pm.environment.set(\"id_client\", id_client);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sch=\"http://itau.com.co/services/accounts/transactionfee/v2/definitions/schemas\" xmlns:sch1=\"http://itau.com.co/commoncannonical/v2/schemas\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <sch:getTransactionFeeRq>\r\n         <sch:HeaderRequest>\r\n            <sch1:MessageHeader>\r\n               <sch1:MessageKey>\r\n                  <sch1:integrationId/>\r\n                  <sch1:requestVersion/>\r\n                  <sch1:requestUUID>41502839-8fc8-83af-37fc-bbc9bc2a60fd</sch1:requestUUID>\r\n               </sch1:MessageKey>\r\n               <sch1:MessageInfo>\r\n                  <sch1:dateTime>2019-10-03T11:04:59</sch1:dateTime>\r\n                  <sch1:systemId/>\r\n                  <sch1:originatorName>App Unica</sch1:originatorName>\r\n                  <sch1:originatorType>141</sch1:originatorType>\r\n                  <sch1:terminalId>172.23.75.14</sch1:terminalId>\r\n                  <sch1:terminalType>Cajero Propio</sch1:terminalType>\r\n                  <sch1:bankIdType/>\r\n                  <sch1:bankId/>\r\n                  <sch1:trnType/>\r\n               </sch1:MessageInfo>\r\n               <sch1:TrnInfoList>\r\n                  <sch1:TrnInfo/>\r\n               </sch1:TrnInfoList>\r\n            </sch1:MessageHeader>\r\n            <sch1:User>\r\n               <sch1:userName>APP Unica</sch1:userName>\r\n               <sch1:userToken/>\r\n               <sch1:employeeIdentlNum/>\r\n            </sch1:User>\r\n         </sch:HeaderRequest>\r\n         <sch:ownerInd>true</sch:ownerInd>\r\n         <sch:trnCategory/>\r\n         <sch:trnCode>850</sch:trnCode>\r\n         <sch:ReferenceInfo>\r\n            <sch1:referenceID/>\r\n            <sch1:reference>Transferencia 850 Julio flores</sch1:reference>\r\n         </sch:ReferenceInfo>\r\n         <sch:FromAcct>\r\n            <sch:AcctKeys>\r\n               <sch1:acctId>032-32105-1</sch1:acctId>\r\n               <sch1:acctType>CRP</sch1:acctType>\r\n               <sch1:acctSubType/>\r\n               <sch1:branchId/>\r\n            </sch:AcctKeys>\r\n            <sch:CustID>\r\n               <sch1:SPName/>\r\n               <sch1:custPermId/>\r\n               <sch1:custLoginId/>\r\n               <sch1:custType/>\r\n            </sch:CustID>\r\n            <sch:addInfo/>\r\n         </sch:FromAcct>\r\n         <sch:ToAcct>\r\n            <sch:AcctKeys>\r\n               <sch1:acctId/>\r\n               <sch1:acctType/>\r\n               <sch1:acctSubType/>\r\n               <sch1:branchId>1</sch1:branchId>\r\n            </sch:AcctKeys>\r\n            <sch:CustID>\r\n            \t<sch1:SPName/>\r\n            \t<sch1:custPermId/>\r\n            \t<sch1:custLoginId/>\r\n            \t<sch1:custType/>\r\n            </sch:CustID>\r\n            <sch:addInfo/>\r\n         </sch:ToAcct>\r\n         <sch:bankId/>\r\n         <sch:CurAmt>\r\n            <sch1:amt>1516121.00</sch1:amt>\r\n            <sch1:curCode/>\r\n         </sch:CurAmt>\r\n         <sch:effDt>2019-07-12T00:00:00</sch:effDt>\r\n      </sch:getTransactionFeeRq>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "{{osb_qa1}}/services/accounts/transactionfee/v2?wsdl",
+					"host": [
+						"{{osb_qa1}}"
+					],
+					"path": [
+						"services",
+						"accounts",
+						"transactionfee",
+						"v2"
+					],
+					"query": [
+						{
+							"key": "wsdl",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer cost OPENCARD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Header xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"></soap:Header>\r\n    <soapenv:Body>\r\n<sch:getTransactionFeeRq xmlns:sch=\"http://itau.com.co/services/support/transactionfee/v1/definitions/schemas\" xmlns:sch1=\"http://itau.com.co/commoncannonical/v2/schemas\">\r\n    <sch:HeaderRequest>\r\n        <!--Optional:-->\r\n        <sch1:MessageHeader>\r\n            <!--Optional:-->\r\n            <sch1:MessageKey>\r\n                <!--Optional:-->\r\n                <sch1:integrationId></sch1:integrationId>\r\n                <!--Optional:-->\r\n                <sch1:requestVersion></sch1:requestVersion>\r\n                <sch1:requestUUID>2bcb7ee4-9115-473f-b6a9-230af080739b</sch1:requestUUID>\r\n            </sch1:MessageKey>\r\n            <!--Optional:-->\r\n            <sch1:MessageInfo>\r\n                <sch1:dateTime>2019-09-04T10:00:00</sch1:dateTime>\r\n                <sch1:systemId></sch1:systemId>\r\n                <!--Optional:-->\r\n                <sch1:originatorName>TM</sch1:originatorName>\r\n                <sch1:originatorType>9</sch1:originatorType>\r\n                <sch1:terminalId>123.4.2.3</sch1:terminalId>\r\n                <!--Optional:-->\r\n                <sch1:terminalType>TM</sch1:terminalType>\r\n                <!--Optional:-->\r\n                <sch1:bankIdType></sch1:bankIdType>\r\n                <!--Optional:-->\r\n                <sch1:bankId></sch1:bankId>\r\n                <!--Optional:-->\r\n                <sch1:trnType></sch1:trnType>\r\n            </sch1:MessageInfo>\r\n            <!--Optional:-->\r\n            <sch1:TrnInfoList>\r\n                <!--Zero or more repetitions:-->\r\n                <sch1:TrnInfo>\r\n                    <!--Optional:-->\r\n                    <sch1:trnCode></sch1:trnCode>\r\n                    <!--Optional:-->\r\n                    <sch1:trnSrc></sch1:trnSrc>\r\n                </sch1:TrnInfo>\r\n            </sch1:TrnInfoList>\r\n        </sch1:MessageHeader>\r\n        <!--Optional:-->\r\n        <sch1:User>\r\n            <!--Optional:-->\r\n            <sch1:userName>U10018</sch1:userName>\r\n            <!--Optional:-->\r\n            <sch1:userToken></sch1:userToken>\r\n            <!--Optional:-->\r\n            <sch1:employeeIdentlNum>14283</sch1:employeeIdentlNum>\r\n        </sch1:User>\r\n    </sch:HeaderRequest>\r\n    <!--Optional:-->\r\n    <sch:effDt>2014-09-18T18:18:33</sch:effDt>\r\n    <!--Optional:-->\r\n    <sch:trnCode>800</sch:trnCode>\r\n    <!--Optional:-->\r\n    <sch:FromAcct>\r\n        <sch1:acctId></sch1:acctId>\r\n        <!--Optional:-->\r\n        <sch1:acctType></sch1:acctType>\r\n        <!--Optional:-->\r\n        <sch1:acctSubType></sch1:acctSubType>\r\n        <!--Optional:-->\r\n        <sch1:branchId></sch1:branchId>\r\n        <!--Optional:-->\r\n        <sch:AcctIdDigit></sch:AcctIdDigit>\r\n        <!--Optional:-->\r\n        <sch:addInfo></sch:addInfo>\r\n        <!--Optional:-->\r\n        <sch:pmtInstType></sch:pmtInstType>\r\n    </sch:FromAcct>\r\n    <!--Optional:-->\r\n    <sch:CurAmt>\r\n        <!--Optional:-->\r\n        <sch1:amt>1000000.00</sch1:amt>\r\n        <!--Optional:-->\r\n        <sch1:curCode>cop</sch1:curCode>\r\n    </sch:CurAmt>\r\n    <!--Optional:-->\r\n    <sch:ToAcct>\r\n        <sch1:acctId></sch1:acctId>\r\n        <!--Optional:-->\r\n        <sch1:acctType></sch1:acctType>\r\n        <!--Optional:-->\r\n        <sch1:acctSubType></sch1:acctSubType>\r\n        <!--Optional:-->\r\n        <sch1:branchId></sch1:branchId>\r\n        <!--Optional:-->\r\n        <sch:AcctIdDigit></sch:AcctIdDigit>\r\n        <!--Optional:-->\r\n        <sch:addInfo></sch:addInfo>\r\n        <!--Optional:-->\r\n        <sch:pmtInstType></sch:pmtInstType>\r\n    </sch:ToAcct>\r\n    <!--Optional:-->\r\n    <sch:cardId>4859**********3144</sch:cardId>\r\n    <!--Optional:-->\r\n    <sch:trnType></sch:trnType>\r\n    <!--Optional:-->\r\n    <sch:bankType></sch:bankType>\r\n    <!--Optional:-->\r\n    <sch:CustId>\r\n        <!--Optional:-->\r\n        <sch1:SPName></sch1:SPName>\r\n        <!--Optional:-->\r\n        <sch1:custPermId></sch1:custPermId>\r\n        <!--Optional:-->\r\n        <sch1:custLoginId></sch1:custLoginId>\r\n        <!--Optional:-->\r\n        <sch1:custType></sch1:custType>\r\n    </sch:CustId>\r\n    <!--Optional:-->\r\n    <sch:bankId></sch:bankId>\r\n    <!--Optional:-->\r\n    <sch:AchCurAmt>\r\n        <!--Optional:-->\r\n        <sch1:amt>1000.00</sch1:amt>\r\n        <!--Optional:-->\r\n        <sch1:curCode>str</sch1:curCode>\r\n        <sch:pmtCount>10</sch:pmtCount>\r\n    </sch:AchCurAmt>\r\n    <!--Optional:-->\r\n    <sch:BcrCurAmt>\r\n        <!--Optional:-->\r\n        <sch1:amt>1000.00</sch1:amt>\r\n        <!--Optional:-->\r\n        <sch1:curCode>str</sch1:curCode>\r\n        <sch:pmtCount>10</sch:pmtCount>\r\n    </sch:BcrCurAmt>\r\n    <!--Optional:-->\r\n    <sch:BatchAmt>\r\n        <!--Optional:-->\r\n        <sch1:amt>1000.00</sch1:amt>\r\n        <!--Optional:-->\r\n        <sch1:curCode>str</sch1:curCode>\r\n    </sch:BatchAmt>\r\n    <!--Optional:-->\r\n    <sch:SentPmtMethodList>\r\n        <!--1 or more repetitions:-->\r\n        <sch:PmtMethod>\r\n            <!--Optional:-->\r\n            <sch:pmtInstType></sch:pmtInstType>\r\n            <!--Optional:-->\r\n            <sch:CurAmt>\r\n                <!--Optional:-->\r\n                <sch1:amt>1000.00</sch1:amt>\r\n                <!--Optional:-->\r\n                <sch1:curCode>str</sch1:curCode>\r\n            </sch:CurAmt>\r\n            <!--Optional:-->\r\n            <sch:acctType></sch:acctType>\r\n            <!--Optional:-->\r\n            <sch:acctId></sch:acctId>\r\n        </sch:PmtMethod>\r\n    </sch:SentPmtMethodList>\r\n    <!--Optional:-->\r\n    <sch:ReceivedPmtMethodList>\r\n        <!--1 or more repetitions:-->\r\n        <sch:PmtMethod>\r\n            <!--Optional:-->\r\n            <sch:pmtInstType></sch:pmtInstType>\r\n            <!--Optional:-->\r\n            <sch:CurAmt>\r\n                <!--Optional:-->\r\n                <sch1:amt>1000.00</sch1:amt>\r\n                <!--Optional:-->\r\n                <sch1:curCode></sch1:curCode>\r\n            </sch:CurAmt>\r\n            <!--Optional:-->\r\n            <sch:acctType></sch:acctType>\r\n            <!--Optional:-->\r\n            <sch:acctId></sch:acctId>\r\n        </sch:PmtMethod>\r\n    </sch:ReceivedPmtMethodList>\r\n    <sch:coreId>OPEN</sch:coreId>\r\n    <sch:batchCode></sch:batchCode>\r\n</sch:getTransactionFeeRq>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "{{osb_desa_prov}}/services/support/transactionfee/v1?wsdl",
+					"host": [
+						"{{osb_desa_prov}}"
+					],
+					"path": [
+						"services",
+						"support",
+						"transactionfee",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "wsdl",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[OL10] (OL2) Transfer: Transferencias.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "eb02c907-63ea-4780-93b0-ec8268a806f0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "600fd027-0cf9-404b-b119-9d0c45daaed6",
+						"exec": [
+							"// Exitoso",
+							"/*",
+							"{",
+							"    \"data\": [",
+							"        {",
+							"            \"recipient_id\": \"9000000000238223\",",
+							"            \"name\": \"Clara Garzon\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"BANCOLOMBIA\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"20594769984\",",
+							"                \"bank_id\": \"007\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"41427031\"",
+							"            },",
+							"            \"created_date\": \"2014-01-26 20:46:42\",",
+							"            \"email\": \"\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"13500000000578216\",",
+							"            \"name\": \"Transportes Dimax SAS\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"BANCOLOMBIA\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"65049614858\",",
+							"                \"bank_id\": \"007\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"3\",",
+							"                \"number\": \"9008972451\"",
+							"            },",
+							"            \"created_date\": \"2017-08-17 08:21:18\",",
+							"            \"email\": \"gadministrativo@transportesdimax.com\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"8500000000201473\",",
+							"            \"name\": \"Gustavo Peñalosa Ramírez\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"ITAU 014\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"019005231\",",
+							"                \"bank_id\": \"014\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"79506829\"",
+							"            },",
+							"            \"created_date\": \"2013-07-18 15:40:12\",",
+							"            \"email\": \"\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"11500000000345231\",",
+							"            \"name\": \"Alberto Ramirez\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"DAVIVIENDA\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"472900013005\",",
+							"                \"bank_id\": \"051\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"19070780\"",
+							"            },",
+							"            \"created_date\": \"2015-05-20 17:21:39\",",
+							"            \"email\": \"\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"8500000000146054\",",
+							"            \"name\": \"Juan Miguel Gonzalez\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"DAVIVIENDA\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"451500074088\",",
+							"                \"bank_id\": \"051\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"19348897\"",
+							"            },",
+							"            \"created_date\": \"2012-08-13 09:29:30\",",
+							"            \"email\": \"\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"8500000000136983\",",
+							"            \"name\": \"Conj. Residencial Torino el Cedro\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"AV VILLAS\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"040093163\",",
+							"                \"bank_id\": \"052\",",
+							"                \"account_type\": \"AHO\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"9000375890\"",
+							"            },",
+							"            \"created_date\": \"2012-06-06 16:47:02\",",
+							"            \"email\": \"\"",
+							"        },",
+							"        {",
+							"            \"recipient_id\": \"12000000000403514\",",
+							"            \"name\": \"ConjResidMonet\",",
+							"            \"account\": {",
+							"                \"bank_name\": \"AV VILLAS\",",
+							"                \"account_description\": \"A\",",
+							"                \"account_number\": \"074095555\",",
+							"                \"bank_id\": \"052\",",
+							"                \"account_type\": \"CTE\"",
+							"            },",
+							"            \"recipient_document\": {",
+							"                \"type\": \"1\",",
+							"                \"number\": \"9004200845\"",
+							"            },",
+							"            \"created_date\": \"2016-01-05 09:14:26\",",
+							"            \"email\": \"\"",
+							"        }",
+							"    ]",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "transaction_id",
+						"value": "{{$guid}}"
+					},
+					{
+						"key": "token_latam",
+						"value": "{{token_ms}}"
+					},
+					{
+						"key": "channel-id",
+						"value": "141"
+					},
+					{
+						"key": "application",
+						"value": "APP Unica"
+					},
+					{
+						"key": "session_id",
+						"value": "{{$guid}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\"source_account\":{\n\t\t\"account_id\": \"054167113\",\n\t\t\"account_type\": \"AHO\"\n\t},\n\t\"destination_account\":{\n\t\t\"account_id\": \"10522621\",\n\t\t\"account_type\": \"CDT\",\n\t\t\"account_subtype\": \"420\",\n\t\t\"recipient_name\": \"Test name\",\n\t\t\"bank_id\": \"014\",\n\t\t\"client_id\": \"U79799611_79799611\"\n\t},\n\t\"amount\":{\n\t\t\"amount\": 30000.00\n\t},\n\t\"comment\":\"Transfer test\",\n\t\"category\":\"115\",\n\t\"effective_date\": \"2019-09-16T12:15:08\",\n\t\"recipient_document\":{\n\t\t\"type\": \"1\",\n\t\t\"number\": \"79799611\"\n\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{server_local}}:8080/transfers/v1/transfers",
+					"host": [
+						"{{server_local}}"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"v1",
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[OSB-D10] Transfer: Transferencia.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aa5e7568-5472-48dc-8cbf-bfa2e03530d9",
+						"exec": [
+							"// P79777889 - Carlos Alejandro Arenas",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"79777889\";",
+							"",
+							"// P19436761 - Alejandro Adolfo Chaves",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"19436761\";",
+							"",
+							"// P52855362 - Sandra Patricia Acosta",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"52855362\";",
+							"",
+							"// P1003314187 - Jose David Lopez",
+							"// var tipo_id_client = \"4\";",
+							"// var id_client = \"1003314187\";",
+							"",
+							"// P30405094 - Ana Maria Rodriguez",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"30405094\";",
+							"",
+							"// P19383901 - Ruben Dario Acosta",
+							"// var tipo_id_client = \"1\";",
+							"// var id_client = \"19383901\";",
+							"",
+							"// P79462733 - Humberto Mora",
+							"var tipo_id_client = \"1\";",
+							"var id_client = \"79462733\";",
+							"",
+							"",
+							"// -----------------------------------------------",
+							"pm.environment.set(\"tipo_id_client\", tipo_id_client);",
+							"pm.environment.set(\"id_client\", id_client);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sch=\"http://itau.com.co/services/transfers/transfer/v1/schemas\" xmlns:sch1=\"http://itau.com.co/commoncannonical/v2/schemas\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <sch:doTransferRq>\n         <sch:HeaderRequest>\n            <sch1:MessageHeader>\n               <sch1:MessageKey>\n                  <sch1:requestUUID>95f8de8f-6265-4f0c-bb1d-9d77781bda48</sch1:requestUUID>\n               </sch1:MessageKey>\n               <sch1:MessageInfo>\n                  <sch1:dateTime>2019-08-02T10:49:45</sch1:dateTime>\n                  <sch1:systemId/>\n                  <sch1:originatorName>APP Unica</sch1:originatorName>\n                  <sch1:originatorType>141</sch1:originatorType>\n                  <sch1:terminalId>127.0.0.1</sch1:terminalId>\n               </sch1:MessageInfo>\n            </sch1:MessageHeader>\n            <sch1:User>\n               <sch1:userName/>\n               <sch1:employeeIdentlNum/>\n            </sch1:User>\n         </sch:HeaderRequest>\n         <sch:CustId>\n            <sch1:custPermId>19436761</sch1:custPermId>\n            <sch1:custLoginId>U19436761_19436761</sch1:custLoginId>\n            <sch1:custType>1</sch1:custType>\n         </sch:CustId>\n         <sch:From>\n            <sch:bankId>014</sch:bankId>\n            <sch:Acct>\n               <sch:acctId>757000025</sch:acctId>\n               <sch:acctSubType/>\n               <sch:acctType>AHO</sch:acctType>\n            </sch:Acct>\n            <sch:ParentAcct>\n               <sch:acctId/>\n               <sch:acctSubType/>\n               <sch:acctType/>\n            </sch:ParentAcct>\n            <sch:custPermId>19436761</sch:custPermId>\n            <sch:custIdType>1</sch:custIdType>\n            <sch:custName/>\n         </sch:From>\n         <sch:To>\n            <sch:bankId>014</sch:bankId>\n            <sch:Acct>\n               <sch:acctId>757000039</sch:acctId>\n               <sch:acctSubType>111</sch:acctSubType>\n               <sch:acctType>CTE</sch:acctType>\n            </sch:Acct>\n            <sch:ParentAcct>\n               <sch:acctId/>\n               <sch:acctSubType/>\n               <sch:acctType/>\n            </sch:ParentAcct>\n            <sch:custPermId>19436761</sch:custPermId>\n            <sch:custIdType>1</sch:custIdType>\n            <sch:custName>Juan Andres Gonzalez Ramirez</sch:custName>\n         </sch:To>\n         <sch:desc>Transfer test</sch:desc>\n         <sch:amt>10000</sch:amt>\n         <sch:effDt>2019-08-02T10:49:45</sch:effDt>\n         <sch:trnCategory>115</sch:trnCategory>\n      </sch:doTransferRq>\n   </soapenv:Body>\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "{{osb_qa1}}/services/transfers/transfer/v1?wsdl",
+					"host": [
+						"{{osb_qa1}}"
+					],
+					"path": [
+						"services",
+						"transfers",
+						"transfer",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "wsdl",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[OL9] (OL2) Question Validate : Validar respuesta.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "channel-id",
+						"value": "7"
+					},
+					{
+						"key": "application",
+						"value": "APP Unica"
+					},
+					{
+						"key": "transaction_id",
+						"value": "{{$guid}}"
+					},
+					{
+						"key": "token_latam",
+						"value": "{{token_ms}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"question\": {\n    \t\"code\": \"Q1.24\",\n    \t\"response\": \"11\",\n    \t\"text\": \"¿Dónde conociste a tu pareja? (Ingresa el nombre completo de la ciudad)\",\n    \t\"type\": \"\"\n    }, \n    \"factor_authentication_id\": \"PMV57eSJGHQptOXxH9GEQq1BYodpozkn2afYG4pTlHg%2FpQ7OknrYpwNI%2BKI%2F1UU72qgMCxsX6KVutk4VqayjyUvWp1Lg%3D%3D\",\n    \"factor_session_id\": \"-3113afd0:16ddb37297b:-5802\",\n    \"factor_transaction_id\": \"TRX_-3113afd0:16ddb37297b:-5801\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://auth-mfa-valid-questions-itau-co-security-dev.appsqa.itauco.col/authentication/v1/mfa/7/questions",
+					"protocol": "http",
+					"host": [
+						"auth-mfa-valid-questions-itau-co-security-dev",
+						"appsqa",
+						"itauco",
+						"col"
+					],
+					"path": [
+						"authentication",
+						"v1",
+						"mfa",
+						"7",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOCAL Question Validate : Validar respuesta.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "channel-id",
+						"value": "7"
+					},
+					{
+						"key": "application",
+						"value": "APP Unica",
+						"disabled": true
+					},
+					{
+						"key": "transaction_id",
+						"value": "{{$guid}}",
+						"disabled": true
+					},
+					{
+						"key": "token_latam",
+						"value": "{{token_ms}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"questions\": [\n    \t{   \n    \t\t\"code\": \"Q5.12\",\n    \t\t\"response\": \"11\",\n    \t\t\"text\": \"¿Cuál es el nombre de tu mejor amigo en la infancia?\",\n    \t\t\"type\": \"\"\n    \t}\n    ],\n    \"factor_authentication_id\": \"PMV57gtPacDyeYUVVCAOuIB9CPnOQqhKXe%2FrBuL5r%2BRucmFH8bO3wdYvp0%2BhqQT%2Ff7qKk8eqieq9O%2FN13l54w8O%2B0o2A%3D%3D\",\n    \"factor_session_id\": \"60e19573:16e3d6fec74:-50ef\",\n    \"factor_transaction_id\": \"TRX_60e19573:16e3d6fec74:-50ee\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_local}}:8084/authentication/v1/mfa/7/questions",
+					"host": [
+						"{{server_local}}"
+					],
+					"port": "8084",
+					"path": [
+						"authentication",
+						"v1",
+						"mfa",
+						"7",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[OD13] obtener Pregunta Adaptativa",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "eb02c907-63ea-4780-93b0-ec8268a806f0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "4384eb57-de7a-4b07-9619-74d9a2d551d7",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token_latam",
+						"value": "{{token_ms}}"
+					},
+					{
+						"key": "channel-id",
+						"value": "6"
+					},
+					{
+						"key": "application",
+						"value": "APP Unica"
+					},
+					{
+						"key": "session_id",
+						"value": "{{$guid}}",
+						"type": "text"
+					},
+					{
+						"key": "transaction_id",
+						"value": "{{$guid}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://auth-mfa-get-questions-itau-co-security.appsqa.itauco.col/authentication/v1/mfa/7/questions?recipient_bank_id=014&recipient_account_country=COL&recipient_account_number=757000025&reference_recipient_description=Ana%20Rodriguez",
+					"protocol": "http",
+					"host": [
+						"auth-mfa-get-questions-itau-co-security",
+						"appsqa",
+						"itauco",
+						"col"
+					],
+					"path": [
+						"authentication",
+						"v1",
+						"mfa",
+						"7",
+						"questions"
+					],
+					"query": [
+						{
+							"key": "recipient_bank_id",
+							"value": "014"
+						},
+						{
+							"key": "recipient_account_country",
+							"value": "COL"
+						},
+						{
+							"key": "recipient_account_number",
+							"value": "757000025"
+						},
+						{
+							"key": "reference_recipient_description",
+							"value": "Ana%20Rodriguez"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "channel-id",
+						"value": "141",
+						"type": "text"
+					},
+					{
+						"key": "application",
+						"value": "APP Unica",
+						"type": "text"
+					},
+					{
+						"key": "token_latam",
+						"value": "{{token_ms}}",
+						"type": "text"
+					},
+					{
+						"key": "transaction_id",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"name\": \"Mario Lopez\",\n\t\t\"email\": \"\",\n\t\t\"account\": {\n    \t\t\"bank_id\": \"007\",\n    \t\t\"account_type\": \"AHO\",\n    \t\t\"account_id\": \"99999888\"\n    \t},\n    \t\"recipient_document\": {\n\t      \"type\": \"1\",\n\t      \"number\": \"69988555\"\n\t    }\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_local}}:8080/transfers/v1/recipients",
+					"host": [
+						"{{server_local}}"
+					],
+					"port": "8080",
+					"path": [
+						"transfers",
+						"v1",
+						"recipients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
