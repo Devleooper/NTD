@@ -1,0 +1,26 @@
+Set<Integer> previous = new HashSet<>();
+        int minPositive = 1;
+        boolean oneFound = false;
+        for (int value : arr) {
+            if (minPositive <= value) {
+                previous.add(value);
+                minPositive++;
+            }
+            if (value == 1) {
+                oneFound = true;
+            }
+        }
+
+        if (!oneFound) {
+            return 1;
+        } else {
+            if (previous.contains(minPositive)) {
+                if (previous.contains(minPositive - 1)) {
+                    return minPositive + 1;
+                } else {
+                    return minPositive - 1;
+                }
+            } else {
+                return minPositive;
+            }
+        }
