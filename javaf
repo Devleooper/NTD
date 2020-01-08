@@ -46,3 +46,42 @@ String[] strings = S.split("");
         }
 
         return newPattern.toString();
+----------------------------------------------------------------
+
+String[] shoes = S.split("");
+
+        int left = 0;
+        int right = 0;
+        int interval = 0;
+        String last = null;
+        for (String shoe : shoes) {
+            if (last == null) {
+                last = shoe;
+                if (shoe.equals("L"))
+                    left++;
+                else
+                    right++;
+            } else if (shoe.equals(last)) {
+                if (last.equals("L"))
+                    left++;
+                else
+                    right++;
+            } else {
+                if (last.equals("L")) {
+                    right++;
+                    last = shoe;
+                } else {
+                    left++;
+                    last = shoe;
+                }
+            }
+
+            if (left == right && (left != 0 && right != 0)) {
+                interval++;
+                left = 0;
+                right = 0;
+                last = null;
+            }
+        }
+
+        return interval;
